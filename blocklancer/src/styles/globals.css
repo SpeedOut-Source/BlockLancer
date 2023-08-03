@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+import
+
+.custom-img{
+    background-image: url("") ;
+}

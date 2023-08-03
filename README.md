@@ -1,6 +1,6 @@
 # Digital Services Marketplace: Empowering Freelancers with Blockchain
 
-![Blockchain](https://example.com/blockchain_image.png)
+![Stellar](https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5e31f51ae7c7eceb8ad395fd_OG%20Default-min.jpg)
 
 ## Overview
 
