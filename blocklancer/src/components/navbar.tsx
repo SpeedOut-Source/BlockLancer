@@ -1,7 +1,6 @@
 import React from 'react';
 import {} from 'react-icons/bi'
 import {} from 'react-icons/bs'
-import {Link} from 'react-scroll'
 
 
 const NavBar = () => {
