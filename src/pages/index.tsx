@@ -13,6 +13,9 @@ export default function Home() {
       <div>
         <NavBar />
       </div>
+      <div className="flex items-center justify-center ">
+        <Carousel/>
+      </div>
       <p className="text-black-500 text-center bg-yellow-400">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       </p>

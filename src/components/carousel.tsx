@@ -5,27 +5,27 @@ const Carousel: React.FC = () => {
 
   return (
     <>
-      <div className="h-96 carousel carousel-vertical rounded-box">
-  <div className="carousel-item h-full">
-    <img src="https://pbs.twimg.com/media/FMWi7CVacAk5R7s.jpg" />
+      <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+        <div className="carousel-item">
+    <img src="" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="https://www.hash13.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-04-at-11.31.19-PM.jpeg"/>
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" />
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="/images/stock/photo-1494253109108-2e30c049369b.jpg" />
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="/images/stock/photo-1550258987-190a2d41a8ba.jpg" />
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="/images/stock/photo-1559181567-c3190ca9959b.jpg" />
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="rounded-box" />
   </div> 
-  <div className="carousel-item h-full">
-    <img src="/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" />
+  <div className="carousel-item">
+    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="rounded-box" />
   </div>
 </div>
       
