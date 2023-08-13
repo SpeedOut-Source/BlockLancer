@@ -1,7 +1,7 @@
 import Head from "next/head";
 import NavBar from "../components/navbar";
 import Carousel from "../components/carousel";
-import Caro from "../components/caro";
+import Card from "../components/cards";
 
 export default function Home() {
   return (
@@ -16,11 +16,15 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center ">
         <Carousel/>
-        <Caro/>
       </div>
+      
+      
       <p className="text-black-500 text-center bg-yellow-400">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       </p>
+      <div>
+        <Card/>
+      </div>
     </>
   );
 }
