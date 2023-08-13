@@ -2,7 +2,6 @@ import Head from "next/head";
 import NavBar from "../components/navbar";
 import Carousel from "../components/carousel";
 import Card from "../components/cards";
-import Test from "../components/test";
 
 export default function Home() {
   return (
@@ -27,9 +26,6 @@ export default function Home() {
         <Card/>
       </div>
 
-      <div>
-        <Test/>
-      </div>
     </>
   );
 }
