@@ -22,8 +22,45 @@ export default function Home() {
       <p className="text-black-500 text-center bg-yellow-400">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       </p>
-      <div>
-        <Card/>
+      <div className="flex flex-row">
+        <Card
+          itemName="Item name"
+          product="Product"
+          avatarImageUrl="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+          backgroundImageUrl="images/home.jpg"
+        />
+        <Card
+          itemName="Item 2"
+          product="Product Name Nai"
+          avatarImageUrl="images\stylish-boy.png"
+          backgroundImageUrl="images/bg_rando.avif"
+        />
+        <Card
+          itemName="Item 1"
+          product="Product Name Hawa"
+          avatarImageUrl="images\artist.png"
+          backgroundImageUrl="images/bg_jpn.avif"
+        />
+      </div>
+      <div className="flex flex-row">
+        <Card
+          itemName="Item 4"
+          product="Product Name Hawa"
+          avatarImageUrl="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+          backgroundImageUrl="images/bg_jpn.avif"
+        />
+        <Card
+          itemName="Item 6"
+          product="Product Dead"
+          avatarImageUrl="images\artist.png"
+          backgroundImageUrl="images/home.jpg"
+        />
+        <Card
+          itemName="Item 5"
+          product="Product Name Nai"
+          avatarImageUrl="images\stylish-boy.png"
+          backgroundImageUrl="images/bg_rando.avif"
+        />
       </div>
 
     </>
