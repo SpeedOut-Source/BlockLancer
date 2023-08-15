@@ -12,7 +12,9 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ### 1. Two Modes: Seller & Buyer
 
-The platform allows users to choose between two roles: Seller and Buyer. Sellers can post their service Plans, while Buyers can post Offers to seek services from Sellers.
+The platform allows users to choose between two roles: 
+**Seller and Buyer**. 
+Sellers can post their service Plans, while Buyers can post Offers to seek services from Sellers.
 
 ### 2. Seller's Plans
 
@@ -54,11 +56,15 @@ Upon a Buyer's acceptance of a Plan, an automated smart contract is created. Thi
 
 - **Enhanced Efficiency:** The platform streamlines the freelance process, reducing manual interventions and enhancing overall efficiency.
 
-- **Fair Competition:** Sellers have equal opportunities to secure projects through transparent and automated bidding.
+- **Fair Competition:** Sellers have equal opportunities to secure projects through transparent and automated bidding. Since this will also push sellers to place their payment requests equal to other sellers, it provides fairness to the buyers as well.
 
-- **Secure Transactions:** Blockchain technology ensures secure and tamper-proof transactions, building trust among all users.
+- **Secure Transactions:** Stellar Blockchain (XLM) technology ensures secure and tamper-proof transactions, building trust among all users.
 
-- **Authenticity:** Blockchain-based user authentication eliminates fake accounts and enhances the authenticity of users.
+- **Authenticity:** Blockchain-based user authentication eliminates fake accounts, duplicate accounts and enhances the authenticity of users. We'll be using stellar wallets to authenticate users. On invitation based beta testing, we'll have the following wallets:
+- Albedo
+- Lobstr (Wallet Connect V2)
+- Rabet
+In future, there will be Google mail login and facebook login based Stellar Wallet system as well.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
