@@ -10,17 +10,17 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ## Key Features
 
-### 1. Two Modes: Seller & Buyer
+### 1. Two Modes/Roles: Seller & Buyer
 
 The platform allows users to choose between two roles: 
 **Seller and Buyer**. 
 Sellers can post their service Plans, while Buyers can post Offers to seek services from Sellers.
 
-### 2. Seller's Plans
+### 2. Seller's Plan / Bids
 
 Sellers can showcase their skills and expertise by posting Plans on the platform. These Plans outline the services they offer, pricing, and delivery timelines.
 
-### 3. Buyer's Offers
+### 3. Buyer's Offers / Budgets 
 
 Buyers can post Offers to express their requirements and expectations. Offers include project details, budget, and any specific terms.
 
@@ -28,13 +28,13 @@ Buyers can post Offers to express their requirements and expectations. Offers in
 
 The platform ensures robust security through blockchain-based user authentication. User identities are protected, ensuring a safe and trustworthy environment for all participants.
 
-### 5. Smart Contracts for Delivery Competition
+### 5. Stellar Smart Contracts for Delivery Competition
 
 Smart contracts are utilized to facilitate fair competition among Sellers. When multiple Sellers bid on the same Offer, smart contracts automatically manage the selection process based on predefined criteria.
 
-### 6. Automated Smart Contract Creation on Plan Acceptance
+### 6. Automated Token Exchange on Plan Acceptance
 
-Upon a Buyer's acceptance of a Plan, an automated smart contract is created. This contract governs the terms and conditions of the project, ensuring transparent and secure transactions.
+Upon a Buyer's acceptance of a Plan, an automated NFT is generated on the stellar Blockchain. This NFT works as a contract, which governs the terms and conditions of the project, ensuring transparent and secure transactions.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
