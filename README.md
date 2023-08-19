@@ -8,7 +8,7 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Techstack
+## Techstack
 logo: js, next, t3 , stellar, typescript, tailwind, daisy 🌼, html + prettier, flowbite
 
 ## Key Features
