@@ -8,6 +8,9 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+##Techstack
+logo: js, next, t3 , stellar, typescript, tailwind, daisy 🌼, html + prettier, flowbite
+
 ## Key Features
 
 ### 1. Two Modes/Roles: Seller & Buyer
