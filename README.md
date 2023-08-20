@@ -9,8 +9,16 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Techstack
-logo: js, next, t3 , stellar, typescript, tailwind, daisy 🌼, html + prettier, flowbite
-[![LinkedIn](https://github.com/get-icon/geticon/blob/master/icons/tailwindcss.svg)](https://www.linkedin.com/in/arnob016/)
+logo: prettier, flowbite
+[![TypeScript](https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg)](https://www.typescriptlang.org/)
+[![Tailwind](https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg)](https://tailwindcss.com/)
+[![Stellar](https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg)](https://stellar.org/)
+[![WalletConnect](https://walletconnect.com/images/logo.svg)](https://walletconnect.com/)
+[![Next JS](https://github.com/get-icon/geticon/blob/master/icons/nextjs-icon.svg)](https://nextjs.org/)
+[![DaisyUI](https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg)](https://daisyui.com/)
+[![HTML](https://github.com/get-icon/geticon/blob/master/icons/html-5.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Prettier](https://github.com/get-icon/geticon/blob/master/icons/prettier.svg)](https://prettier.io/)
+[![Figma](https://github.com/get-icon/geticon/blob/master/icons/figma.svg)](https://www.figma.com/)
 
 ## Key Features
 
