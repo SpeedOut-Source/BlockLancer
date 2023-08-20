@@ -10,7 +10,7 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ## Techstack
 logo: prettier, flowbite
-[![TypeScript](https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg)](https://www.typescriptlang.org/)
+[![TypeScript](https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg =100x20)](https://www.typescriptlang.org/)
 [![Tailwind](https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg)](https://tailwindcss.com/)
 [![Stellar](https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg)](https://stellar.org/)
 [![WalletConnect](https://walletconnect.com/images/logo.svg)](https://walletconnect.com/)
