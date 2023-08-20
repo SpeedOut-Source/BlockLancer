@@ -11,15 +11,33 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 ## Techstack
 
 <div align="center">
-    <a href="https://www.typescriptlang.org/"><img src="https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg" alt="TypeScript" width="50"></a>
-    <a href="https://tailwindcss.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg" alt="Tailwind" width="50"></a>
-    <a href="https://stellar.org/"><img src="https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg" alt="Stellar" width="50"></a>
-    <a href="https://walletconnect.com/"><img src="https://walletconnect.com/images/logo.svg" alt="WalletConnect" width="50"></a>
-    <a href="https://nextjs.org/"><img src="https://github.com/get-icon/geticon/blob/master/icons/nextjs-icon.svg" alt="Next JS" width="50"></a>
-    <a href="https://daisyui.com/"><img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="DaisyUI" width="50"></a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" alt="HTML" width="50"></a>
-    <a href="https://prettier.io/"><img src="https://github.com/get-icon/geticon/blob/master/icons/prettier.svg" alt="Prettier" width="50"></a>
-    <a href="https://www.figma.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/figma.svg" alt="Figma" width="50"></a>
+    <a href="https://www.typescriptlang.org/" title="Typescript" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://tailwindcss.com/" title="Tailwind" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/tailwindcss-icon.svg" alt="Tailwind" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://stellar.org/" title="Stellar" rel="nofollow">
+        <img src="https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg" alt="Stellar" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://walletconnect.com/" title="WalletConnect" rel="nofollow">
+        <img src="https://walletconnect.com/images/logo.svg" alt="WalletConnect" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://nextjs.org/" title="Next JS" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/nextjs-icon.svg" alt="Next JS" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://daisyui.com/" title="DaisyUI" rel="nofollow">
+        <img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="DaisyUI" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="HTML" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/html-5.svg" alt="HTML" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://prettier.io/" title="Prettier" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/prettier.svg" alt="Prettier" width="21px" height="21px" style="max-width: 100%;">
+    </a>
+    <a href="https://www.figma.com/" title="Figma" rel="nofollow">
+        <img src="https://github.com/get-icon/geticon/raw/master/icons/figma.svg" alt="Figma" width="21px" height="21px" style="max-width: 100%;">
+    </a>
 </div>
 
 
