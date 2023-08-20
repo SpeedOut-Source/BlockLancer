@@ -6,7 +6,8 @@
 
 The Digital Services Marketplace is a revolutionary platform that empowers freelancers and clients through blockchain technology. This marketplace offers two distinct modes: Seller and Buyer, each catering to the specific needs of users.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## Techstack
 <div align="center" style="background-color: #f2f2f2; padding: 10px;">
@@ -21,7 +22,8 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
     <a href="https://www.figma.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/figma.svg" alt="Figma" width="50"></a>
 </div>
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## Key Features
 
@@ -49,7 +51,8 @@ Smart contracts are utilized to facilitate fair competition among Sellers. When 
 
 Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stellar Blockchain. This NFT works as a contract, governing the terms and conditions of the project, ensuring transparent and secure transactions.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## How It Works
 
@@ -63,7 +66,8 @@ Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stella
 
 5. The project proceeds, and upon successful completion, the smart contract ensures timely and accurate payments to the Seller.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## Benefits
 
@@ -75,7 +79,8 @@ Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stella
 
 - **Authenticity:** Blockchain-based user authentication eliminates fake accounts and duplicate accounts, enhancing the authenticity of users. We'll use Stellar wallets for user authentication, including Albedo, Lobstr (Wallet Connect V2), and Rabet. In the future, we plan to implement Google Mail login and Facebook login-based Stellar Wallet systems as well.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## Future Developments
 
@@ -83,9 +88,10 @@ The Digital Services Marketplace aims to leverage blockchain's capabilities furt
 
 Join us in embracing the power of blockchain to revolutionize the freelance industry!
 
-For more information, check out our [GitHub repository](https://github.com/digital-services-marketplace).
+For more information, check out our [GitHub repository](https://github.com/arnob016/BlockLancer).
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## :scroll: Credits
 
