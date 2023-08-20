@@ -9,16 +9,37 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Techstack
-logo: prettier, flowbite
-[![TypeScript](https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg =100x20)](https://www.typescriptlang.org/)
-[![Tailwind](https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg)](https://tailwindcss.com/)
-[![Stellar](https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg)](https://stellar.org/)
-[![WalletConnect](https://walletconnect.com/images/logo.svg)](https://walletconnect.com/)
-[![Next JS](https://github.com/get-icon/geticon/blob/master/icons/nextjs-icon.svg)](https://nextjs.org/)
-[![DaisyUI](https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg)](https://daisyui.com/)
-[![HTML](https://github.com/get-icon/geticon/blob/master/icons/html-5.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Prettier](https://github.com/get-icon/geticon/blob/master/icons/prettier.svg)](https://prettier.io/)
-[![Figma](https://github.com/get-icon/geticon/blob/master/icons/figma.svg)](https://www.figma.com/)
+
+<div style="display: flex; align-items: center;">
+    <a href="https://www.typescriptlang.org/">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg" alt="TypeScript" width="50" height="50">
+    </a>
+    <a href="https://tailwindcss.com/">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg" alt="Tailwind" width="50" height="50">
+    </a>
+    <a href="https://stellar.org/">
+        <img src="https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg" alt="Stellar" width="50" height="50">
+    </a>
+    <a href="https://walletconnect.com/">
+        <img src="https://walletconnect.com/images/logo.svg" alt="WalletConnect" width="50" height="50">
+    </a>
+    <a href="https://nextjs.org/">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/nextjs-icon.svg" alt="Next JS" width="50" height="50">
+    </a>
+    <a href="https://daisyui.com/">
+        <img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="DaisyUI" width="50" height="50">
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" alt="HTML" width="50" height="50">
+    </a>
+    <a href="https://prettier.io/">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/prettier.svg" alt="Prettier" width="50" height="50">
+    </a>
+    <a href="https://www.figma.com/">
+        <img src="https://github.com/get-icon/geticon/blob/master/icons/figma.svg" alt="Figma" width="50" height="50">
+    </a>
+</div>
+
 
 ## Key Features
 
