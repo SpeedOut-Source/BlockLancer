@@ -12,8 +12,8 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 <div align="center">
     <a href="https://www.typescriptlang.org/"><img src="https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg" alt="TypeScript" width="50"></a>
     <a href="https://tailwindcss.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg" alt="Tailwind" width="50"></a>
-    <a href="https://stellar.org/"><img src="https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg" alt="Stellar" width="50"></a>
-    <a href="https://walletconnect.com/"><img src="https://walletconnect.com/images/logo.svg" alt="WalletConnect" width="50"></a>
+    <a href="https://stellar.org/"><img src="https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5dec8960504967fd31147f62_Stellar_lockup_black_RGB.svg" alt="Stellar" width="80"></a>
+    <a href="https://walletconnect.com/"><img src="https://walletconnect.com/images/logo.svg" alt="WalletConnect" width="80"></a>
     <a href="https://nextjs.org/"><img src="https://github.com/get-icon/geticon/blob/master/icons/nextjs-icon.svg" alt="Next JS" width="50"></a>
     <a href="https://daisyui.com/"><img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="DaisyUI" width="50"></a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://github.com/get-icon/geticon/blob/master/icons/html-5.svg" alt="HTML" width="50"></a>
