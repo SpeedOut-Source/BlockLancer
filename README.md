@@ -21,6 +21,8 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
     <a href="https://www.figma.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/figma.svg" alt="Figma" width="50"></a>
 </div>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<span style="color: black;">White Text</span>
 
 ## Key Features
 
