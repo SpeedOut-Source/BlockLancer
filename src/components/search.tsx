@@ -25,12 +25,12 @@ const Search: React.FC = () => {
       }
     } else if (event.key === 'Enter' && searchValue.trim() !== '') {
       event.preventDefault();
-      navigateToSearch(searchValue.trim()); // Use the navigateToSearch function
+      navigateToSearch(searchValue.trim());
     }
   };
 
   const navigateToSearch = (query: string) => {
-    //HTML5 History API
+    // HTML5 History API
     window.history.pushState(null, '', `/results/search=${encodeURIComponent(query)}`);
     const popStateEvent = new PopStateEvent('popstate');
     window.dispatchEvent(popStateEvent);
@@ -63,12 +63,12 @@ const Search: React.FC = () => {
             />
           </svg>
           <input
-            ref={inputRef} 
+            ref={inputRef}
             type="search"
             className={`peer relative cursor-pointer z-10 h-12 w-12 rounded-full border bg-transparent pr-12 outline-none focus:w-full focus:cursor-text focus:border-gray-500 focus:pl-4 focus:pr-16 ${expanded ? 'pl-4' : 'pl-0'}`}
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            style={{ display: 'block'}}
+            style={{ display: 'block' }}
           />
         </div>
       </form>

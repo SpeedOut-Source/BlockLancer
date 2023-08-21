@@ -18,6 +18,7 @@ const Carousel: React.FC = () => {
           </a>
         </div>
       </div>
+
       <div id="slide2" className="carousel-item relative w-full">
         <img
           src="https://wallpaperaccess.com/full/699629.jpg"
@@ -33,6 +34,7 @@ const Carousel: React.FC = () => {
           </a>
         </div>
       </div>
+
       <div id="slide3" className="carousel-item relative w-full">
         <img
           src="https://wallpaperaccess.com/full/3812753.jpg"
@@ -48,6 +50,7 @@ const Carousel: React.FC = () => {
           </a>
         </div>
       </div>
+
       <div id="slide4" className="carousel-item relative w-full">
         <img
           src="https://wallpaperaccess.com/full/3812745.jpg"
@@ -64,7 +67,6 @@ const Carousel: React.FC = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 
