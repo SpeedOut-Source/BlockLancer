@@ -6,7 +6,7 @@ interface CardProps {
   itemName: string;
   product: string;
   avatarImageUrl: string;
-  backgroundImageUrl: string; // New prop for background image URL
+  backgroundImageUrl: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
