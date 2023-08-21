@@ -9,9 +9,10 @@ const Navbar: React.FC = () => {
     <a className="btn btn-ghost normal-case text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 transition duration-2000 ease-in-out hover:uppercase hover: px-5 hover:px-1 hover:py-1 hover:bg-gradient-to-l  from-pink-500 to-violet-500 ">BlockLancer</a>
   </div>
   <div className="flex-auto">
-    <Search />
+
   </div>
   <div className="flex-none">
+  <Search />
     <ul className="menu menu-horizontal px-1 flex items-center">
       <li><a>About</a></li>
       <li className="bg-transparent">
