@@ -4,20 +4,19 @@ import Search from "./search";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="navbar bg-base-100 border-2 border-sky-500">
+    <div className="border-2 navbar bg-base-100 border-sky-500">
       <div className="flex-auto">
-        <a className="btn btn-ghost normal-case text-xl bg-clip-text text-transparent 
-          bg-gradient-to-r from-pink-500 to-violet-500 transition duration-2000 ease-in-out hover:bg-gradient-to-l">
+        <a className="text-xl text-transparent normal-case transition ease-in-out btn btn-ghost bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 duration-2000 hover:bg-gradient-to-l">
           BlockLancer
         </a>
       </div>
       <div className="flex-none">
         <Search />
-        <ul className="menu menu-horizontal px-1 flex items-center">
+        <ul className="flex items-center px-1 menu menu-horizontal">
           <li><a>About</a></li>
           <li className="bg-transparent">
             <Link href="/signup" className="hover:!bg-transparent">
-              <button className="btn btn-ghost btn-outline btn-accent btn-sm bg-transparent">
+              <button className="bg-transparent btn btn-ghost btn-outline btn-accent btn-sm">
                 Sign Up
               </button>
             </Link>
