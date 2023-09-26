@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.12",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@t3-oss/env-nextjs": "^0.6.0",
@@ -23,15 +24,14 @@
     "react-icons": "^4.10.1",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
+    "sharp": "^0.32.6",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.21.4",
-    "zustand": "^4.4.1",
-    "@heroicons/react": "^2.0.12"
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "tailwind-scrollbar": "^3.0.5",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.16.0",
     "@types/prettier": "^2.7.2",
@@ -46,6 +46,7 @@
     "postcss": "^8.4.27",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.1",
+    "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   },
