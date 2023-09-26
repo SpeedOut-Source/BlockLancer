@@ -9,7 +9,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@t3-oss/env-nextjs": "^0.6.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.279.0",
     "next": "^13.4.19",
     "next-auth": "^4.23.0",
     "react": "18.2.0",
@@ -18,22 +22,25 @@
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.16.0",
+    "@types/prettier": "^2.7.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "autoprefixer": "^10.4.14",
+    "daisyui": "^3.5.1",
     "eslint": "^8.47.0",
     "eslint-config-next": "^13.4.19",
     "postcss": "^8.4.27",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.1",
-    "@types/prettier": "^2.7.2",
     "daisyui": "^3.5.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
