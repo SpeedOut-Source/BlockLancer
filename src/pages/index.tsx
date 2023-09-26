@@ -1,5 +1,4 @@
 import Head from "next/head";
-import NavBar from "../components/navbar";
 import Carousel from "../components/carousel";
 import Card from "../components/cards";
 
@@ -14,45 +13,41 @@ export default function Home() {
         />
         <link rel="icon" href="icon.png" />
       </Head>
-      
-      <div>
-        <NavBar />
-      </div>
-      
+
       <div className="flex items-center justify-center">
         <Carousel />
       </div>
 
-      <p className="text-center bg-yellow-400 text-black-500">
+      <p className="text-black-500 bg-yellow-400 text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
       <div className="flex flex-row ">
-      <Card
-        itemName="Item name"
-        product="Product"
-        avatarImageUrl="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
-        backgroundImageUrl="images/home.jpg"
-        startingPrice="400$" 
-        duration="7 Days"
-        artistName ="Arnob"
-/>
+        <Card
+          itemName="Item name"
+          product="Product"
+          avatarImageUrl="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+          backgroundImageUrl="images/home.jpg"
+          startingPrice="400$"
+          duration="7 Days"
+          artistName="Arnob"
+        />
         <Card
           itemName="Item 2"
           product="Product Name Nai"
           avatarImageUrl="images\stylish-boy.png"
           backgroundImageUrl="images/bg_rando.avif"
-          startingPrice="300$" 
+          startingPrice="300$"
           duration="2 Days"
-          artistName ="Zonaid"
+          artistName="Zonaid"
         />
         <Card
           itemName="Item 1"
           product="Product Name Hawa"
           avatarImageUrl="images\artist.png"
           backgroundImageUrl="images/bg_jpn.avif"
-          startingPrice="400$" 
+          startingPrice="400$"
           duration="7 Days"
-          artistName ="Mou"
+          artistName="Mou"
         />
       </div>
       <div className="flex flex-row">
@@ -61,8 +56,8 @@ export default function Home() {
           product="Product Name Hawa"
           avatarImageUrl="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
           backgroundImageUrl="images/bg_jpn.avif"
-          startingPrice="400$" 
-          artistName ="Arnob"
+          startingPrice="400$"
+          artistName="Arnob"
           duration="7 Days"
         />
         <Card
@@ -70,17 +65,17 @@ export default function Home() {
           product="Product Dead"
           avatarImageUrl="images\artist.png"
           backgroundImageUrl="images/home.jpg"
-          startingPrice="400$" 
+          startingPrice="400$"
           duration="6 Days"
-          artistName ="Arnob"
+          artistName="Arnob"
         />
         <Card
           itemName="Item 5"
           product="Product Name Nai"
           avatarImageUrl="images\stylish-boy.png"
           backgroundImageUrl="images/bg_rando.avif"
-          startingPrice="600$" 
-          artistName ="Biplob"
+          startingPrice="600$"
+          artistName="Biplob"
           duration="7 Days"
         />
       </div>
