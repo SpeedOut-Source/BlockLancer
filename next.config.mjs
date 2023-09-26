@@ -6,6 +6,15 @@ await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  images: {
+    domains: [
+      "media.giphy.com",
+      "ipfs.io",
+      "cdn.discordapp.com",
+      "raw.githubusercontent.com",
+      "avatars.githubusercontent.com",
+    ], // need to updated ./src/lib/constants SUPPORTED_IMAGE_OPTIMIZE
+  },
   reactStrictMode: true,
 
   /**
