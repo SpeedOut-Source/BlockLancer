@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+
 import { type Config } from "tailwindcss";
 
 export default {
@@ -74,5 +77,9 @@ export default {
     },
   },
 
-  plugins: [require("tailwindcss-animate"), require("daisyui")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("daisyui"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 } satisfies Config;
