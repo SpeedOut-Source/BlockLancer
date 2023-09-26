@@ -58,11 +58,11 @@ export default function Search({ className }: SearchProps) {
     <div className={twMerge("relative inline-block", className)}>
       <form action="" className={`relative mx-auto w-full`}>
         <div className="relative">
-          <SearchIcon className="absolute inset-y-0 right-2 my-auto h-8 w-12 border-l border-transparent stroke-gray-500 px-3 peer-focus:border-gray-500 peer-focus:stroke-gray-500" />
+          <SearchIcon className="absolute inset-y-0 right-2 z-50 my-auto h-8 w-12 border-l border-transparent px-3 peer-focus:border-gray-500 peer-focus:stroke-gray-500" />
           <input
             ref={inputRef}
             type="search"
-            className="peer relative z-10 h-12 w-full cursor-text rounded-full border border-gray-500 bg-transparent pl-4 pr-16 outline-none"
+            className="peer relative z-10 h-12 w-full cursor-text rounded-full border border-gray-500 bg-base-100/80 pl-4 pr-16 outline-none"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />

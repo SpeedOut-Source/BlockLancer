@@ -19,7 +19,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         disableTransitionOnChange
       >
         <div className="flex h-screen flex-col justify-between">
-          <div>
+          <div className="flex h-full flex-col">
             <Navbar />
             <Component {...pageProps} />
           </div>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Search from "~/components/search";
+import Hero from "~/components/hero";
 
 export default function Home() {
   return (
@@ -13,9 +13,7 @@ export default function Home() {
         <link rel="icon" href="icon.png" />
       </Head>
 
-      <div className="mx-2 mt-6 flex justify-center">
-        <Search className="w-full max-w-lg" />
-      </div>
+      <Hero />
     </>
   );
 }
