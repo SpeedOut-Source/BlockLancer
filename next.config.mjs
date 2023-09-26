@@ -13,6 +13,7 @@ const config = {
       "cdn.discordapp.com",
       "raw.githubusercontent.com",
       "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
     ], // need to updated ./src/lib/constants SUPPORTED_IMAGE_OPTIMIZE
   },
   reactStrictMode: true,

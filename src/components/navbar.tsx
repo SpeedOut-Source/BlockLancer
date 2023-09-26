@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./logo";
 import Hamburger from "./hamburger";
+import LoginWithGoogle from "./login_with_google";
 
 const Navbar: React.FC = () => {
   return (
@@ -11,9 +12,7 @@ const Navbar: React.FC = () => {
           <Hamburger />
           <Logo />
         </div>
-        <Link className="btn" href="/">
-          Log in
-        </Link>
+        <LoginWithGoogle />
       </div>
       <div className="hidden w-full justify-between xl:flex">
         <div className="flex space-x-2 bg-base-100">
@@ -34,14 +33,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-x-2">
-          <Link className="btn" href="/">
-            Log in
-          </Link>
-          <Link className="btn" href="/">
-            Sign up
-          </Link>
-        </div>
+        <LoginWithGoogle />
       </div>
     </header>
   );
