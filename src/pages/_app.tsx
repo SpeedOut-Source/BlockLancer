@@ -18,13 +18,13 @@ const MyApp: AppType<{ session: Session | null }> = ({
         defaultTheme="dark"
         disableTransitionOnChange
       >
-        <div className="flex h-screen flex-col justify-between">
-          <div className="flex h-full flex-col">
+        <main className="flex min-h-screen flex-col justify-between">
+          <div className="flex min-h-full flex-col">
             <Navbar />
             <Component {...pageProps} />
           </div>
           <Footer />
-        </div>
+        </main>
       </ThemeProvider>
     </SessionProvider>
   );

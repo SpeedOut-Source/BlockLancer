@@ -7,7 +7,7 @@ interface HeroProps {
 export default function Hero(props: HeroProps) {
   return (
     <section
-      className="hero h-full "
+      className="hero h-[calc(100vh-108px)]"
       style={{
         backgroundImage:
           "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
