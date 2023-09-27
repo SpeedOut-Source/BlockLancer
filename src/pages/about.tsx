@@ -18,7 +18,7 @@ export default function About() {
             title: "BlockLancer",
             codeName: packageJson.name,
             logo: {
-              logoUrl: "/images/blockLancer-logo.png",
+              logoUrl: "/logo.png",
               alt: "BlockLancer logo",
             },
             version: packageJson.version,

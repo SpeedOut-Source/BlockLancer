@@ -10,7 +10,7 @@ export default function Home() {
           name="description"
           content="Digital Services Marketplace: Empowering Freelancers with Blockchain"
         />
-        <link rel="icon" href="icon.png" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
 
       <Hero />
