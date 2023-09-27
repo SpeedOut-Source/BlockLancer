@@ -40,6 +40,7 @@
     "react-icons": "^4.10.1",
     "react-markdown": "^8.0.3",
     "react-scroll": "^1.8.9",
+    "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
