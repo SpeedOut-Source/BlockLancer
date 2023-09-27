@@ -62,7 +62,7 @@ export default function Search({ className }: SearchProps) {
           <input
             ref={inputRef}
             type="search"
-            className="peer relative z-10 h-12 w-full cursor-text rounded-full border border-gray-500 bg-base-100/80 pl-4 pr-16 outline-none"
+            className="peer relative z-10 h-10 w-full cursor-text rounded-full border border-gray-500 bg-base-100/80 pl-4 pr-16 outline-none"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
