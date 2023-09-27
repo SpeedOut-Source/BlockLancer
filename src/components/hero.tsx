@@ -17,8 +17,8 @@ export default function Hero(props: HeroProps) {
               profile to find the work that you love to do.
             </p>
           </div>
-          <div className="relative h-[300px] w-full">
-            <Image alt="Hero image" src="/images/hero-image.png" fill />
+          <div className="relative h-[450px] w-full">
+            <Image alt="Hero image" src="/images/workinggirl.png" fill />
           </div>
         </div>
       </div>
