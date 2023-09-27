@@ -41,7 +41,16 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
-    NEXT_PUBLIC_DESCRIPTION: z.string(),
+    NEXT_PUBLIC_LOG_ENABLE: z
+      .string()
+      .refine((s) => s === "true" || s === "false")
+      .transform((s) => s === "true"),
+    NEXT_PUBLIC_STELLAR_ACCOUNT_URL: z.string(),
+    NEXT_PUBLIC_WALLET_CONNECT_ID: z.string(),
+    NEXT_PUBLIC_TITLE: z.string(),
+    NEXT_PUBLIC_DESC: z.string(),
+    NEXT_PUBLIC_URL: z.string(),
+    NEXT_PUBLIC_ICON: z.string(),
   },
 
   /**
@@ -49,13 +58,12 @@ export const env = createEnv({
    * middlewares) or client-side so we need to destruct manually.
    */
   runtimeEnv: {
+    NEXT_PUBLIC_LOG_ENABLE: process.env.NEXT_PUBLIC_LOG_ENABLE,
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
     DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
-    NEXT_PUBLIC_DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION,
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
     apiKey: process.env.apiKey,
     authDomain: process.env.authDomain,
     projectId: process.env.projectId,
@@ -64,6 +72,13 @@ export const env = createEnv({
     appId: process.env.appId,
     clientId: process.env.clientId,
     clientSecret: process.env.clientSecret,
+    NEXT_PUBLIC_STELLAR_ACCOUNT_URL:
+      process.env.NEXT_PUBLIC_STELLAR_ACCOUNT_URL,
+    NEXT_PUBLIC_WALLET_CONNECT_ID: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID,
+    NEXT_PUBLIC_TITLE: process.env.NEXT_PUBLIC_TITLE,
+    NEXT_PUBLIC_DESC: process.env.NEXT_PUBLIC_DESC,
+    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
+    NEXT_PUBLIC_ICON: process.env.NEXT_PUBLIC_ICON,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.

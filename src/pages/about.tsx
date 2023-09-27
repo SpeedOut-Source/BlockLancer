@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Head>
         <title>About | BlockLancer</title>
-        <meta name="description" content={env.NEXT_PUBLIC_DESCRIPTION} />
+        <meta name="description" content={env.NEXT_PUBLIC_DESC} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container mx-auto mt-5 ">

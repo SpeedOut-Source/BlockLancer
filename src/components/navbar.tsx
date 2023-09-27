@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./logo";
 import Hamburger from "./hamburger";
-import LoginWithGoogle from "./login_with_google";
+import ConnectWalletButton from "./connect_wallet/connet_wallet_button";
 
 const Navbar: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
           <Hamburger />
           <Logo />
         </div>
-        <LoginWithGoogle />
+        <ConnectWalletButton />
       </div>
       <div className="hidden w-full justify-between xl:flex">
         <Logo />
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
             Contact us
           </Link>
         </div>
-        <LoginWithGoogle />
+        <ConnectWalletButton />
       </div>
     </header>
   );

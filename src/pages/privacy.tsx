@@ -16,7 +16,7 @@ export default function Privacy(props: PrivacyProps) {
     <>
       <Head>
         <title>Privacy | BlockLancer</title>
-        <meta name="description" content={env.NEXT_PUBLIC_DESCRIPTION} />
+        <meta name="description" content={env.NEXT_PUBLIC_DESC} />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
