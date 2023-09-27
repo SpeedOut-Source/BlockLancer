@@ -18,7 +18,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         defaultTheme="dark"
         disableTransitionOnChange
       >
-        <main className="flex min-h-screen flex-col justify-between">
+        <main className="relative flex min-h-screen flex-col justify-between bg-gradient-to-b from-gray-900 via-[#300171] to-slate-900 before:pointer-events-none before:absolute before:inset-0 before:block before:h-full before:w-full before:bg-[url('/images/background-pattern.svg')] before:bg-cover before:bg-no-repeat before:opacity-5">
           <div className="flex min-h-full flex-col">
             <Navbar />
             <Component {...pageProps} />

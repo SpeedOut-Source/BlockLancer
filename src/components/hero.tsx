@@ -6,14 +6,7 @@ interface HeroProps {
 }
 export default function Hero(props: HeroProps) {
   return (
-    <section
-      className="hero h-[calc(100vh-108px)]"
-      style={{
-        backgroundImage:
-          "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
-      }}
-    >
-      <div className="hero-overlay bg-opacity-60"></div>
+    <section className="hero h-[calc(100vh-108px)]">
       <div className="hero-content flex flex-col gap-5 py-4 text-center  text-neutral-content lg:gap-36">
         <Search className="w-full max-w-lg" />
         <div className="flex h-full w-full flex-col items-center gap-4 md:flex-row">
