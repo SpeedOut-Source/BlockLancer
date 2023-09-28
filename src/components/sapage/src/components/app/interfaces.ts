@@ -6,6 +6,7 @@ export interface DevPlateProps {
   name: string;
   role: DevRole;
   key?: React.Key;
+  github: string;
 }
 
 export interface SAPageProps {
