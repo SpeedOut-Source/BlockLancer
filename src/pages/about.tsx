@@ -34,18 +34,21 @@ export default function About() {
               imgUrl: "https://avatars.githubusercontent.com/u/43641536",
               role: "Lead Developer",
               url: "https://biplobsd.me",
+              github: "https://github.com/biplobsd",
             },
             {
               name: "Arnob Dey",
               imgUrl: "https://avatars.githubusercontent.com/u/74468064",
               role: "Developer",
-              url: "https://github.com/arnob016",
+              url: "https://www.arnob.social/",
+              github: "https://github.com/arnob016",
             },
             {
               name: "Md. Mehedi Hasan",
               imgUrl: "https://avatars.githubusercontent.com/u/124759758",
               role: "Developer",
               url: "https://github.com/71mehedi",
+              github: "https://github.com/71mehedi",
             },
           ]}
           reportUrl="https://github.com/SpeedOut-Source/BlockLancer/issues"

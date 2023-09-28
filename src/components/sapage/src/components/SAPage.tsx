@@ -12,9 +12,9 @@ const SAPage = (props: SAPageProps) => {
   let tap = 0;
 
   async function tapToOpen() {
-    if (tap >= 5 && !mainDev) {
+    if (tap >= 2 && !mainDev) {
       setMainDev(true);
-      await delay(5000);
+      await delay(1000000);
       tap = 0;
       setMainDev(false);
     }
@@ -105,6 +105,7 @@ const SAPage = (props: SAPageProps) => {
           <div className="flex w-full justify-start px-5 text-2xl">
             Developer info
           </div>
+
           {props.devs.map((i) => (
             <DevPlate
               key={i.imgUrl}
@@ -112,6 +113,7 @@ const SAPage = (props: SAPageProps) => {
               role={i.role}
               url={i.url}
               imgUrl={i.imgUrl}
+              github={i.github}
             />
           ))}
         </div>
@@ -127,7 +129,7 @@ const SAPage = (props: SAPageProps) => {
       >
         <div
           className="mt-3 flex w-full items-center justify-start overflow-hidden px-5
-        transition-all duration-500 ease-in-out hover:scale-105 hover:rounded-xl hover:border-blue-400 hover:bg-slate-900/80 hover:px-4
+        transition-all duration-500 ease-in-out hover:scale-100 hover:rounded-xl hover:border-blue-400 hover:bg-slate-900/80 hover:px-4
         hover:py-3 hover:text-xl hover:font-bold hover:tracking-wider hover:text-slate-300/70 hover:backdrop-blur
         focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 active:scale-90
         "

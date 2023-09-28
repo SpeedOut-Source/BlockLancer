@@ -8,8 +8,8 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
 ## Techstack
+
 <div align="center" style="background-color: #f2f2f2; padding: 10px;">
     <a href="https://www.typescriptlang.org/"><img src="https://github.com/get-icon/geticon/blob/master/icons/typescript-icon.svg" alt="TypeScript" width="50"></a>
     <a href="https://tailwindcss.com/"><img src="https://github.com/get-icon/geticon/blob/master/icons/tailwindcss-icon.svg" alt="Tailwind" width="50"></a>
@@ -24,7 +24,6 @@ The Digital Services Marketplace is a revolutionary platform that empowers freel
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
 ## Key Features
 
 ### 1. Two Modes/Roles: Seller & Buyer
@@ -35,7 +34,7 @@ The platform allows users to choose between two roles: **Seller and Buyer**. Sel
 
 Sellers can showcase their skills and expertise by posting plans on the platform. These plans outline the services they offer, pricing, and delivery timelines.
 
-### 3. Buyer's Offers / Budgets 
+### 3. Buyer's Offers / Budgets
 
 Buyers can post offers to express their requirements and expectations. Offers include project details, budget, and any specific terms.
 
@@ -53,7 +52,6 @@ Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stella
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
 ## How It Works
 
 1. Sellers register and choose the Seller mode to post their plans.
@@ -68,7 +66,6 @@ Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stella
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
 ## Benefits
 
 - **Enhanced Efficiency:** The platform streamlines the freelance process, reducing manual interventions and enhancing overall efficiency.
@@ -81,7 +78,6 @@ Upon a Buyer's acceptance of a plan, an automated NFT is generated on the Stella
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
 ## Future Developments
 
 The Digital Services Marketplace aims to leverage blockchain's capabilities further by introducing a decentralized autonomous organization (DAO) model for platform governance. This will allow stakeholders to actively participate in decision-making processes and shape the platform's future.
@@ -91,7 +87,6 @@ Join us in embracing the power of blockchain to revolutionize the freelance indu
 For more information, check out our [GitHub repository](https://github.com/arnob016/BlockLancer).
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
 
 ## :scroll: Credits
 
