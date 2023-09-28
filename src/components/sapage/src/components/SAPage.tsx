@@ -14,7 +14,7 @@ const SAPage = (props: SAPageProps) => {
   async function tapToOpen() {
     if (tap >= 2 && !mainDev) {
       setMainDev(true);
-      await delay(1000000);
+      await delay(10000);
       tap = 0;
       setMainDev(false);
     }
@@ -29,8 +29,21 @@ const SAPage = (props: SAPageProps) => {
         alt={props.app.logo.alt}
         width={150}
         height={150}
+        className="rounded-full cursor-pointer hover:scale-110 hover:rotate-180 transition-all duration-700"
       />
-      <div className="text-3xl font-semibold">{props.app.title}</div>
+      <div className="text-3xl font-semibold flex cursor-alias">
+      <div className="hover:transform hover:-translate-y-1 hover:-translate-x-1">B</div>
+      <div className="hover:transform hover:-translate-y-1 hover:translate-x-1">L</div>
+      <div className="hover:transform hover:-translate-y-2 hover:-translate-x-1">O</div>
+      <div className="hover:transform hover:-translate-y-2 hover:-translate-x-1">C</div>
+      <div className="hover:transform hover:-translate-y-1 hover:translate-x-1">K</div>
+      <div className="hover:transform hover:-translate-y-1 hover:-translate-x-1">L</div>
+      <div className="hover:transform hover:-translate-y-2 hover:-translate-x-1">A</div>
+      <div className="hover:transform hover:-translate-y-1 hover:translate-x-1">N</div>
+      <div className="hover:transform hover:-translate-y-2 hover:-translate-x-1">C</div>
+      <div className="hover:transform hover:-translate-y-1 hover:translate-x-1">E</div>
+      <div className="hover:transform hover:-translate-y-2 hover:-translate-x-1">R</div>
+      </div>
       <p
         onClick={() => setCLIsopen(!clIsOpen)}
         className={`${
@@ -134,7 +147,7 @@ const SAPage = (props: SAPageProps) => {
         focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 active:scale-90
         "
         >
-          <div className="h-16 w-16 ">
+          <div className="h-16 w-16 hover:animate-ping transition-all duration-700">
             <BugAntIcon />
           </div>
           <div className="ml-3">
