@@ -35,13 +35,12 @@ const SellGig: React.FC = () => {
   const currentImage = images[currentImageIndex];
 
   return (
-    <>
       <div className="flex flex-col">
         <div className="flex flex-col justify-start ml-10 mt-4 gap-y-4">
           <p className="rounded-xl w-fit font-bold text-black bg-violet-400 p-2 px-10">
             Sell Post
           </p>
-          <p className="font-medium text-2xl text-white">{gigTitle}</p> {/* Increased text size */}
+          <p className="font-medium text-2xl text-white">{gigTitle}</p>
           <div>
             <div className="flex items-center">
               <Image
@@ -51,11 +50,11 @@ const SellGig: React.FC = () => {
                 alt="user"
                 className="rounded-full mr-2"
               />
-              <p className="text-gray-400 mb-2">{sellerName}</p>
+              <p className="text-gray-400">{sellerName}</p>
             </div>
           </div>
 
-          <div className="flex flex-row mt-5 items-center">
+          <div className="flex flex-row items-center">
             <div className="flex flex-row items-center -space-x-4">
               <Image
                 src={leftArrowImg}
@@ -85,7 +84,7 @@ const SellGig: React.FC = () => {
             <div className="flex flex-col w-full ml-10">
               <h2 className="text-2xl font-bold text-white mb-2">{productTitle}</h2>
               <h2 className="text-2xl font-light text-white mb-2">Details:</h2>
-              <p className="text-2xl font-bold text-white mb-2">{productDetails}</p> {/* Increased text size */}
+              <p className="text-2xl font-bold text-white mb-2">{productDetails}</p>
               <p className="text-gray-400">Delivery time: {deliveryTime}</p>
               <button className="btn btn-outline w-fit px-7 my-2 hover:scale-105 transition duration-300 ease-in-out hover:px-10 btn-warning">
                 Confirm
@@ -105,7 +104,6 @@ const SellGig: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
