@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -21,17 +22,17 @@ const productAbout = [
 
 const SellGig: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null); // State for the selected image
-  const fileInputRef = useRef(null); // Ref for the file input element
+  const [selectedImage, setSelectedImage] = useState<File | null>(null); // State for the selected image
+  const fileInputRef = useRef<HTMLInputElement>(null); // Ref for the file input element
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] ?? null;
     setSelectedImage(file);
   };
   
   // Add this function to open the file input when the "upload image" link is clicked.
   const openFileInput = () => {
-    fileInputRef.current.click();
+    fileInputRef.current?.click();
   };
 
   const nextImage = () => {
@@ -39,6 +40,7 @@ const SellGig: React.FC = () => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
