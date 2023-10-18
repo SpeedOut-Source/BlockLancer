@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         </div>
         <ConnectWalletButton />
       </div>
-      <div className="hidden w-full justify-between xl:flex">
+      <div className="hidden w-full justify-between xl:flex mx-4">
         <Logo />
         <div className="flex gap-10">
           <Link className="btn btn-ghost" href="/">

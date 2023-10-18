@@ -20,7 +20,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:mail@biplobsd.me" className="textAniHover">
+                <a href="mailto:blocklancer7@gmail.com" className="textAniHover">
                   Contact Us
                 </a>
               </li>
