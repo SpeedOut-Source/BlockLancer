@@ -24,10 +24,7 @@ const Navbar: React.FC = () => {
             Features
           </Link>
           <Link className="btn btn-ghost" href="/">
-            About us
-          </Link>
-          <Link className="btn btn-ghost" href="/">
-            Contact us
+            My orders
           </Link>
         </div>
         <ConnectWalletButton />
