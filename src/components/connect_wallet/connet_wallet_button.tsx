@@ -17,7 +17,7 @@ export default function ConnectWalletButton() {
   const setDialog = useDialogStore();
   return (
     <div className="flex items-center gap-2">
-      {walletState.isAva && (
+      {isWalletAva && (
         <Link href="/editgig" className="btn">
           <PlusIcon className="h-5 w-5" />
           <span>Create</span>
