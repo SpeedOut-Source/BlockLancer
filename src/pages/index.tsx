@@ -39,7 +39,7 @@ export default function Home({ data }: { data: GigType[] }) {
       {data && data.length > 0 && (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="py-4">
-            <h2 className="text-2xl font-bold leading-7  sm:truncate sm:text-3xl">
+            <h2 className="text-2xl text-white font-bold leading-7  sm:truncate sm:text-3xl">
               Latest Gigs
             </h2>
           </div>

@@ -48,7 +48,7 @@ const SAPage = (props: SAPageProps) => {
         onClick={() => setCLIsopen(!clIsOpen)}
         className={`${
           clIsOpen && "font-bold tracking-[0.5em]"
-        } mb-4 mt-1 flex cursor-pointer space-x-2 text-center text-xs tracking-wider transition-all duration-700 hover:tracking-widest hover:text-black`}
+        } mb-4 mt-1 flex cursor-pointer space-x-2 text-center text-xs tracking-wider transition-all duration-700 hover:tracking-widest hover:text-white`}
       >
         <span className="font-semibold">{props.app.codeName}</span>
         <span>v{props.app.version}</span>
@@ -93,7 +93,7 @@ const SAPage = (props: SAPageProps) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="text-sm transition-all duration-700 hover:tracking-widest hover:text-black">
+        <div className="text-sm transition-all duration-700 hover:tracking-widest hover:text-white">
           Powered by {props.poweredBy.companyName}
         </div>
       </Link>
@@ -102,7 +102,7 @@ const SAPage = (props: SAPageProps) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="mt-3 text-xs transition-all duration-700 hover:tracking-widest hover:text-black ">
+        <div className="mt-3 text-xs transition-all duration-700 hover:tracking-widest hover:text-white ">
           Developed by {props.devCompany.name}, {props.devCompany.year}
         </div>
       </Link>

@@ -56,7 +56,7 @@ const SellGig: React.FC = () => {
     <div className="flex flex-col">
       <div className="flex m-5 flex-col lg:flex-row xl:mx-20">
         <div className="flex flex-col">
-          <p className="rounded-xl ml-5 w-fit font-bold text-black bg-violet-400 p-2 px-10">
+          <p className="rounded-xl ml-5 w-fit font-bold text-white bg-violet-400 p-2 px-10">
             Sell Post
           </p>
           <p className="font-medium text-2xl text-white ml-5 mt-5">{gigTitle}</p>
@@ -118,7 +118,7 @@ const SellGig: React.FC = () => {
           <div className="overflow-x-auto mt-24 border-2 rounded-md lg:max-w-lg xl:max-w-xl">
             <table className="table">
               <thead>
-                <tr className="bg-zinc-500 font-extrabold text-black">
+                <tr className="bg-zinc-500 font-extrabold text-white">
                   <th></th>
                   <th colSpan={2}>Features</th>
                   <th>Basic</th>
@@ -151,7 +151,7 @@ const SellGig: React.FC = () => {
           <div className="overflow-x-auto mt-20 border-2 rounded-md">
             <table className="table">
               <thead>
-                <tr className="bg-zinc-500 font-extrabold text-black">
+                <tr className="bg-zinc-500 font-extrabold text-white">
                   <th></th>
                   <th colSpan={2}>Features</th>
                   <th>Basic</th>

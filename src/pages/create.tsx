@@ -12,16 +12,16 @@ const featureData = [
   {
     id: 1,
     label: "Description",
-    basic: "I will do this but only this",
-    premium: "I will do this but also do this",
-    deluxe: "I will do everything",
+    basic: "What will you provide?",
+    premium: "What will you provide?",
+    deluxe: "What will you provide?",
   },
   {
     id: 2,
     label: "Duration",
-    basic: "5 days",
-    premium: "3 days",
-    deluxe: "2 days",
+    basic: "?? days",
+    premium: "?? days",
+    deluxe: "?? days",
   },
   { id: 3, label: "Revisions", basic: "None", premium: "2", deluxe: "4" },
   { id: 4, label: "Feature 1", basic: "❌", premium: "✔️", deluxe: "✔️" },
@@ -190,13 +190,13 @@ const SellGig = (props: GigType) => {
       >
         <div className="flex flex-col gap-5 lg:flex-row xl:mx-20">
           <div className="flex flex-col gap-5">
-            <p className="ml-5 w-fit rounded-xl bg-violet-400 p-2 px-10 font-bold text-black">
+            <p className="w-fit rounded-xl bg-violet-400 p-2 px-10 font-bold text-white">
               Sell Post
             </p>
             {isEditPage ? (
               <input
                 type="text"
-                placeholder="Enter your title"
+                placeholder="Enter GIG title"
                 className="input input-bordered w-full"
                 name="title"
                 defaultValue={props.title}
@@ -219,9 +219,9 @@ const SellGig = (props: GigType) => {
               )}
             </div>
             {isEditPage && (
-              <div className="m-2 mx-28 flex flex-col gap-2">
+              <div className="m-2 mr-36 flex flex-col gap-2">
                 <div className="inputField">
-                  <span className="w-[18.4rem]">Upload thumbnail</span>
+                  <span className="w-[18.4rem] text-amber-100">Upload GIG thumbnail</span>
                   <div className="w-full">
                     <input
                       ref={inputThumImgRef}
@@ -239,8 +239,8 @@ const SellGig = (props: GigType) => {
               <div
                 className={`rounded-2xl border border-white/80 p-3 backdrop-blur`}
               >
-                <span className="text-sm tracking-wider text-gray-500">
-                  Thumbnail image
+                <span className="text-sm tracking-wider text-gray-200">
+                  What people will see:
                 </span>
                 <div
                   style={{
@@ -262,12 +262,13 @@ const SellGig = (props: GigType) => {
             </div>
           </div>
 
-          <div className="mt-24 overflow-x-auto rounded-md border-2 lg:max-w-lg xl:max-w-xl">
-            <table className="table">
+        
+          <div className="">
+            <table className="table mt-8 md:mt-24 overflow-x-auto rounded-md border-2 lg:max-w-lg xl:max-w-xl">
               <thead>
-                <tr className="bg-zinc-500 font-extrabold text-black">
+                <tr className="bg-zinc-500 font-extrabold text-white">
                   <th></th>
-                  <th colSpan={2}>Features</th>
+                  <th colSpan={2} className="font-extrabold">Features</th>
                   <th>Basic</th>
                   <th>Premium</th>
                   <th>Deluxe</th>
@@ -275,14 +276,14 @@ const SellGig = (props: GigType) => {
               </thead>
               <tbody>
                 {featureData.map((item) => (
-                  <tr key={item.id} className="hover">
-                    <th>{item.id}</th>
+                  <tr key={item.id} className="bg-white/40 font-bold text-black hover">
+                    <th className="font-extrabold">{item.id}</th>
                     <td colSpan={2}>{item.label}</td>
                     <td>
                       {isEditPage ? (
                         <input
                           type="text"
-                          placeholder="Enter your basic"
+                          placeholder="Basic plan price"
                           className="input input-bordered w-full"
                           name={`basic-${item.id}`}
                           defaultValue={
@@ -298,7 +299,7 @@ const SellGig = (props: GigType) => {
                       {isEditPage ? (
                         <input
                           type="text"
-                          placeholder="Enter your premium"
+                          placeholder="Premium plan price"
                           className="input input-bordered w-full"
                           name={`premium-${item.id}`}
                           defaultValue={
@@ -316,7 +317,7 @@ const SellGig = (props: GigType) => {
                       {isEditPage ? (
                         <input
                           type="text"
-                          placeholder="Enter your deluxe"
+                          placeholder="Deluxe Plan Price"
                           className="input input-bordered w-full"
                           name={`deluxe-${item.id}`}
                           defaultValue={
@@ -336,6 +337,16 @@ const SellGig = (props: GigType) => {
             </table>
           </div>
         </div>
+        <div className="flex flex-col justify-center items-center">
+    <div className="bg-white/70 px-10 py-4 rounded-xl">
+    <div className="mb-2 font-extrabold">Choose your order</div>
+    <div className="flex gap-x-5">
+      <button className="btn btn-outline btn-primary">Basic</button>
+      <button className="btn btn-outline btn-secondary">Premium</button>
+      <button className="btn btn-outline btn-accent">Deluxe</button>
+    </div>
+  </div>
+  </div>
 
         {isEditPage && (
           <button type="submit" className="btn btn-success">
