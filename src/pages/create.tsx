@@ -5,6 +5,7 @@ import { useConnectWalletStateStore } from "~/lib/states/connect_wallet_state";
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { AlertTriangle } from "lucide-react";
 import { addrShort, bytesToMB } from "~/lib/utils";
+import { useRouter } from "next/router";
 
 const featureData = [
   {
@@ -34,7 +35,26 @@ const featureData = [
   },
 ];
 
-const SellGig: React.FC = () => {
+export interface GigType {
+  id: string;
+  title: string;
+  img: string;
+  user: string;
+  date: string;
+  plans: {
+    id: number;
+    basic: string;
+    premium: string;
+    deluxe: string;
+  }[];
+}
+
+const SellGig = (props: GigType) => {
+  console.log(props);
+  const router = useRouter();
+  const isEditPage = ["/edit/[id]", "/create"].includes(router.pathname);
+
+  console.log(isEditPage, router.pathname);
   const walletState = useConnectWalletStateStore();
   const [isWalletAva, setIsWalletAva] = useState(false);
   const inputThumImgRef = useRef<HTMLInputElement | null>(null);
@@ -45,7 +65,7 @@ const SellGig: React.FC = () => {
 
   const [isLoadingThum, setIsLoadingThum] = useState(false);
   const [imageThumUrl, setImageThumUrl] = useState<string | ArrayBuffer | null>(
-    null,
+    props.img,
   );
 
   const handlerThumbImage = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,14 +118,15 @@ const SellGig: React.FC = () => {
     }
 
     try {
-      await toast.promise(
+      const res = await toast.promise(
         axios.post("/api/create", {
           user: walletState.pubkey,
           img: imageThumUrl,
           title: data.title,
           plans,
           date: new Date().valueOf().toString(),
-        }),
+          id: router.query.id as string,
+        } as GigType),
         {
           loading: "Uploading...",
           success: <b>Added file info!</b>,
@@ -113,12 +134,35 @@ const SellGig: React.FC = () => {
           error: (e) => <b>{e.response.data.message}</b>,
         },
       );
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      await router.push(`/view/${res.data.id}`);
     } catch (error) {
       console.error(error);
     }
   };
 
-  if (!isWalletAva) {
+  async function deleteHandler() {
+    try {
+      await toast.promise(
+        axios.get("/api/delete", {
+          params: {
+            id: router.query.id as string,
+          },
+        }),
+        {
+          loading: "Deleting...",
+          success: <b>Deleted file info!</b>,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+          error: (e) => <b>{e.response.data.message}</b>,
+        },
+      );
+      router.back();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  if (isEditPage && !isWalletAva) {
     return (
       <div className="alert alert-warning">
         <AlertTriangle className="mr-2 h-5 w-5" />
@@ -128,127 +172,172 @@ const SellGig: React.FC = () => {
   }
 
   return (
-    <form
-      className="flex flex-col gap-5 p-5"
-      onSubmit={(e) => void submitHandler(e)}
-    >
-      <div className="flex flex-col gap-5 lg:flex-row xl:mx-20">
-        <div className="flex flex-col gap-5">
-          <p className="ml-5 w-fit rounded-xl bg-violet-400 p-2 px-10 font-bold text-black">
-            Sell Post
-          </p>
-          <input
-            type="text"
-            placeholder="Enter your title"
-            className="input input-bordered w-full"
-            name="title"
-            required
-          />
-          <div className="ml-5 mr-10 flex items-center justify-between">
-            <p className="mt-2.5 text-gray-400">
-              User: {addrShort(walletState.pubkey)}
+    <div className="flex flex-col gap-5 p-5">
+      {props.user && walletState.pubkey === props.user && (
+        <button onClick={() => void deleteHandler()} className="btn">
+          Delete
+        </button>
+      )}
+      <form
+        className="flex flex-col gap-5 p-5"
+        onSubmit={(e) => void submitHandler(e)}
+      >
+        <div className="flex flex-col gap-5 lg:flex-row xl:mx-20">
+          <div className="flex flex-col gap-5">
+            <p className="ml-5 w-fit rounded-xl bg-violet-400 p-2 px-10 font-bold text-black">
+              Sell Post
             </p>
-          </div>
-          <div className="m-2 mx-28 flex flex-col gap-2">
-            <div className="inputField">
-              <span className="w-[18.4rem]">Upload thumbnail</span>
-              <div className="w-full">
-                <input
-                  ref={inputThumImgRef}
-                  onChange={handlerThumbImage}
-                  required
-                  className="file-input w-full text-sm text-gray-500"
-                  type="file"
-                  accept="image/jpeg, image/png"
-                />
-              </div>
-            </div>
-          </div>
+            {isEditPage ? (
+              <input
+                type="text"
+                placeholder="Enter your title"
+                className="input input-bordered w-full"
+                name="title"
+                defaultValue={props.title}
+                required
+              />
+            ) : (
+              <p className="ml-5 mt-5 text-2xl font-medium text-white">
+                {props.title}
+              </p>
+            )}
 
-          <div className="mt-5 flex items-center">
-            <div
-              className={`rounded-2xl border border-white/80 p-3 backdrop-blur`}
-            >
-              <span className="text-sm tracking-wider text-gray-500">
-                Thumbnail image
-              </span>
+            <div className="ml-5 mr-10 flex items-center justify-between">
+              <p className="mt-2.5 text-gray-400">
+                User: {addrShort(isEditPage ? walletState.pubkey : props.user)}
+              </p>
+              {props.date && (
+                <p className="mt-2.5 text-gray-400">
+                  Date: {new Date(+props.date).toLocaleDateString()}
+                </p>
+              )}
+            </div>
+            {isEditPage && (
+              <div className="m-2 mx-28 flex flex-col gap-2">
+                <div className="inputField">
+                  <span className="w-[18.4rem]">Upload thumbnail</span>
+                  <div className="w-full">
+                    <input
+                      ref={inputThumImgRef}
+                      onChange={handlerThumbImage}
+                      required
+                      className="file-input w-full text-sm text-gray-500"
+                      type="file"
+                      accept="image/jpeg, image/png"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="mt-5 flex items-center">
               <div
-                style={{
-                  backgroundImage: `url(${imageThumUrl as string})`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-                className="group relative flex h-72 w-72 rounded-3xl border-8 border-white/40 lg:mt-10 xl:mt-10"
+                className={`rounded-2xl border border-white/80 p-3 backdrop-blur`}
               >
-                {isLoadingThum ? (
-                  <span className="btn btn-circle loading mx-auto my-auto" />
-                ) : (
-                  imageThumUrl === null && (
-                    <PhotoIcon className="flex h-full w-full justify-center text-white/40" />
-                  )
-                )}
+                <span className="text-sm tracking-wider text-gray-500">
+                  Thumbnail image
+                </span>
+                <div
+                  style={{
+                    backgroundImage: `url(${imageThumUrl as string})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                  }}
+                  className="group relative flex h-72 w-72 rounded-3xl border-8 border-white/40 lg:mt-10 xl:mt-10"
+                >
+                  {isLoadingThum ? (
+                    <span className="btn btn-circle loading mx-auto my-auto" />
+                  ) : (
+                    imageThumUrl === null && (
+                      <PhotoIcon className="flex h-full w-full justify-center text-white/40" />
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-24 overflow-x-auto rounded-md border-2 lg:max-w-lg xl:max-w-xl">
-          <table className="table">
-            <thead>
-              <tr className="bg-zinc-500 font-extrabold text-black">
-                <th></th>
-                <th colSpan={2}>Features</th>
-                <th>Basic</th>
-                <th>Premium</th>
-                <th>Deluxe</th>
-              </tr>
-            </thead>
-            <tbody>
-              {featureData.map((item) => (
-                <tr key={item.id} className="hover">
-                  <th>{item.id}</th>
-                  <td colSpan={2}>{item.label}</td>
-                  <td>
-                    <input
-                      type="text"
-                      placeholder="Enter your basic"
-                      className="input input-bordered w-full"
-                      name={`basic-${item.id}`}
-                      defaultValue={item.basic}
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      placeholder="Enter your premium"
-                      className="input input-bordered w-full"
-                      name={`premium-${item.id}`}
-                      defaultValue={item.premium}
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      placeholder="Enter your deluxe"
-                      className="input input-bordered w-full"
-                      name={`deluxe-${item.id}`}
-                      defaultValue={item.deluxe}
-                      required
-                    />
-                  </td>
+          <div className="mt-24 overflow-x-auto rounded-md border-2 lg:max-w-lg xl:max-w-xl">
+            <table className="table">
+              <thead>
+                <tr className="bg-zinc-500 font-extrabold text-black">
+                  <th></th>
+                  <th colSpan={2}>Features</th>
+                  <th>Basic</th>
+                  <th>Premium</th>
+                  <th>Deluxe</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {featureData.map((item) => (
+                  <tr key={item.id} className="hover">
+                    <th>{item.id}</th>
+                    <td colSpan={2}>{item.label}</td>
+                    <td>
+                      {isEditPage ? (
+                        <input
+                          type="text"
+                          placeholder="Enter your basic"
+                          className="input input-bordered w-full"
+                          name={`basic-${item.id}`}
+                          defaultValue={
+                            props.id ? props.plans[item.id]?.basic : item.basic
+                          }
+                          required
+                        />
+                      ) : (
+                        <span>{item.basic}</span>
+                      )}
+                    </td>
+                    <td>
+                      {isEditPage ? (
+                        <input
+                          type="text"
+                          placeholder="Enter your premium"
+                          className="input input-bordered w-full"
+                          name={`premium-${item.id}`}
+                          defaultValue={
+                            props.id
+                              ? props.plans[item.id]?.premium
+                              : item.premium
+                          }
+                          required
+                        />
+                      ) : (
+                        <span>{item.premium}</span>
+                      )}
+                    </td>
+                    <td>
+                      {isEditPage ? (
+                        <input
+                          type="text"
+                          placeholder="Enter your deluxe"
+                          className="input input-bordered w-full"
+                          name={`deluxe-${item.id}`}
+                          defaultValue={
+                            props.id
+                              ? props.plans[item.id]?.deluxe
+                              : item.deluxe
+                          }
+                          required
+                        />
+                      ) : (
+                        <span>{item.deluxe}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
 
-      <button type="submit" className="btn btn-success">
-        Submit
-      </button>
-    </form>
+        {isEditPage && (
+          <button type="submit" className="btn btn-success">
+            Submit
+          </button>
+        )}
+      </form>
+    </div>
   );
 };
 
