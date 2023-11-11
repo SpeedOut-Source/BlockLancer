@@ -6,6 +6,7 @@ import { PhotoIcon } from "@heroicons/react/24/solid";
 import { AlertTriangle } from "lucide-react";
 import { addrShort, bytesToMB } from "~/lib/utils";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const featureData = [
   {
@@ -172,11 +173,16 @@ const SellGig = (props: GigType) => {
   }
 
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <div className="flex flex-col gap-5 p-5 items-center">
       {props.user && walletState.pubkey === props.user && (
-        <button onClick={() => void deleteHandler()} className="btn">
-          Delete
-        </button>
+        <div className="btn-group">
+          <button onClick={() => void deleteHandler()} className="btn">
+            Delete
+          </button>
+          <Link href={`/edit/${props.id}`} className="btn">
+            Edit
+          </Link>
+        </div>
       )}
       <form
         className="flex flex-col gap-5 p-5"
