@@ -21,8 +21,13 @@ export default function Privacy(props: PrivacyProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="">
-        <div className={styles.markdownBody + ""}>
+      <article
+        className={
+          styles.markdownBody +
+          "prose-stone prose-headings:my-1 prose-a:my-1 prose-a:text-blue-600 prose-a:no-underline prose-pre:m-0 prose-pre:bg-transparent prose-pre:p-0 prose-li:my-0 prose-img:my-2 prose-img:inline-block prose-img:rounded-xl container prose relative mx-auto mt-5 max-w-4xl"
+        }
+      >
+        <div className="rounded-2xl bg-base-100/80 px-6 py-4 ring-1 ring-base-content/5">
           <ReactMarkdown
             rehypePlugins={[rehypeRaw]}
             remarkPlugins={[remarkGfm]}
@@ -30,7 +35,7 @@ export default function Privacy(props: PrivacyProps) {
             {props.data}
           </ReactMarkdown>
         </div>
-      </main>
+      </article>
     </>
   );
 }

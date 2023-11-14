@@ -81,5 +81,6 @@ export default {
     require("tailwindcss-animate"),
     require("daisyui"),
     require("tailwind-scrollbar")({ nocompatible: true }),
+    require("@tailwindcss/typography"),
   ],
 } satisfies Config;
