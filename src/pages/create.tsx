@@ -173,7 +173,7 @@ const SellGig = (props: GigType) => {
   }
 
   return (
-    <div className="flex flex-col gap-5 p-5 items-center">
+    <div className="flex flex-col items-center gap-5 p-5">
       {props.user && walletState.pubkey === props.user && (
         <div className="btn-group">
           <button onClick={() => void deleteHandler()} className="btn">
@@ -206,10 +206,9 @@ const SellGig = (props: GigType) => {
               <p className="ml-5 mt-5 text-2xl font-medium text-white">
                 {props.title}
                 <p className="mt-2 text-sm font-medium text-white/60">
-                GIG ID: {props.id}
+                  GIG ID: {props.id}
+                </p>
               </p>
-              </p>
-              
             )}
 
             <div className="ml-5 mr-10 flex items-center justify-between">
@@ -225,7 +224,9 @@ const SellGig = (props: GigType) => {
             {isEditPage && (
               <div className="m-2 mr-36 flex flex-col gap-2">
                 <div className="inputField">
-                  <span className="w-[18.4rem] text-amber-100">Upload GIG thumbnail</span>
+                  <span className="w-[18.4rem] text-amber-100">
+                    Upload GIG thumbnail
+                  </span>
                   <div className="w-full">
                     <input
                       ref={inputThumImgRef}
@@ -266,13 +267,14 @@ const SellGig = (props: GigType) => {
             </div>
           </div>
 
-        
           <div className="">
-            <table className="table mt-8 md:mt-24 overflow-x-auto rounded-md border-2 lg:max-w-lg xl:max-w-xl">
+            <table className="table mt-8 overflow-x-auto rounded-md border-2 md:mt-24 lg:max-w-lg xl:max-w-xl">
               <thead>
                 <tr className="bg-zinc-500 font-extrabold text-white">
                   <th></th>
-                  <th colSpan={2} className="font-extrabold">Features</th>
+                  <th colSpan={2} className="font-extrabold">
+                    Features
+                  </th>
                   <th>Basic</th>
                   <th>Premium</th>
                   <th>Deluxe</th>
@@ -280,7 +282,10 @@ const SellGig = (props: GigType) => {
               </thead>
               <tbody>
                 {featureData.map((item) => (
-                  <tr key={item.id} className="bg-white/40 font-bold text-white hover">
+                  <tr
+                    key={item.id}
+                    className="hover bg-white/40 font-bold text-white"
+                  >
                     <th className="font-extrabold">{item.id}</th>
                     <td colSpan={2}>{item.label}</td>
                     <td>
@@ -291,7 +296,9 @@ const SellGig = (props: GigType) => {
                           className="input input-bordered w-full font-extralight text-white/50"
                           name={`basic-${item.id}`}
                           defaultValue={
-                            props.id ? props.plans[item.id]?.basic : item.basic
+                            props.id
+                              ? props.plans[item.id - 1]?.basic
+                              : item.basic
                           }
                           required
                         />
@@ -308,7 +315,7 @@ const SellGig = (props: GigType) => {
                           name={`premium-${item.id}`}
                           defaultValue={
                             props.id
-                              ? props.plans[item.id]?.premium
+                              ? props.plans[item.id - 1]?.premium
                               : item.premium
                           }
                           required
@@ -326,7 +333,7 @@ const SellGig = (props: GigType) => {
                           name={`deluxe-${item.id}`}
                           defaultValue={
                             props.id
-                              ? props.plans[item.id]?.deluxe
+                              ? props.plans[item.id - 1]?.deluxe
                               : item.deluxe
                           }
                           required
@@ -341,16 +348,18 @@ const SellGig = (props: GigType) => {
             </table>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
-    <div className="bg-white/70 px-10 py-4 rounded-xl">
-    <div className="mb-2 font-extrabold text-stone-950">Choose your order</div>
-    <div className="flex gap-x-5">
-      <button className="btn btn-outline btn-primary">Basic</button>
-      <button className="btn btn-outline btn-secondary">Premium</button>
-      <button className="btn btn-outline btn-accent">Deluxe</button>
-    </div>
-  </div>
-  </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="rounded-xl bg-white/70 px-10 py-4">
+            <div className="mb-2 font-extrabold text-stone-950">
+              Choose your order
+            </div>
+            <div className="flex gap-x-5">
+              <button className="btn btn-primary btn-outline">Basic</button>
+              <button className="btn btn-secondary btn-outline">Premium</button>
+              <button className="btn btn-accent btn-outline">Deluxe</button>
+            </div>
+          </div>
+        </div>
 
         {isEditPage && (
           <button type="submit" className="btn btn-success">
