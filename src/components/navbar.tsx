@@ -6,7 +6,7 @@ import ConnectWalletButton from "./connect_wallet/connet_wallet_button";
 
 const Navbar: React.FC = () => {
   return (
-    <header className="navbar">
+    <header className="navbar bg-white/30 hover:bg-white/50 rounded-md">
       <div className="flex w-full items-start justify-between xl:hidden">
         <div className="flex items-center gap-2">
           <Hamburger />
@@ -17,14 +17,14 @@ const Navbar: React.FC = () => {
       <div className="hidden w-full justify-between xl:flex mx-4">
         <Logo />
         <div className="flex gap-10">
-          <Link className="btn btn-ghost" href="/">
+          <Link className="btn btn-ghost font-extrabold" href="/">
             Home
           </Link>
-          <Link className="btn btn-ghost" href="/">
-            Features
+          <Link className="btn btn-ghost font-extrabold" href="/">
+            Latest GIGs
           </Link>
-          <Link className="btn btn-ghost" href="/">
-            My orders
+          <Link className="btn btn-ghost font-extrabold" href="about">
+            About
           </Link>
         </div>
         <ConnectWalletButton />

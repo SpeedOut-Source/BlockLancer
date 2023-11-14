@@ -20,3 +20,7 @@ export async function delay(ms: number) {
 export function checkPubkey(pubkey: string): boolean {
   return !pubkey || pubkey.trim() === "" || !(pubkey.length === 56);
 }
+
+export function bytesToMB(bytes: number): number {
+  return Math.round(bytes / 1000000);
+}

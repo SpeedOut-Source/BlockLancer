@@ -26,7 +26,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
       >
         <main
           className={
-            "relative flex min-h-screen flex-col justify-between bg-gradient-to-b from-gray-900 via-[#300171] to-slate-900 before:pointer-events-none before:absolute before:inset-0 before:block before:h-full before:w-full before:bg-[url('/images/background-pattern.svg')] before:bg-cover before:bg-no-repeat before:opacity-5 " +
+            "relative flex min-h-screen flex-col justify-between bg-gradient-to-r from-cyan-800 via-blue-800 to-purple-800 before:pointer-events-none before:absolute before:inset-0 before:block before:h-full before:w-full before:bg-[url('/images/bg.jpg')] before:bg-cover before:bg-no-repeat before:opacity-5 " +
             +inner.className
           }
         >
