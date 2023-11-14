@@ -190,7 +190,7 @@ const SellGig = (props: GigType) => {
       >
         <div className="flex flex-col gap-5 lg:flex-row xl:mx-20">
           <div className="flex flex-col gap-5">
-            <p className="w-fit rounded-xl bg-violet-400 p-2 px-10 font-bold text-white">
+            <p className="w-fit rounded-xl bg-gradient-to-l from-purple-400 via-purple-600 to-purple-800 p-2 px-10 font-bold text-white">
               Sell Post
             </p>
             {isEditPage ? (
@@ -205,7 +205,11 @@ const SellGig = (props: GigType) => {
             ) : (
               <p className="ml-5 mt-5 text-2xl font-medium text-white">
                 {props.title}
+                <p className="mt-2 text-sm font-medium text-white/60">
+                GIG ID: {props.id}
               </p>
+              </p>
+              
             )}
 
             <div className="ml-5 mr-10 flex items-center justify-between">
@@ -276,7 +280,7 @@ const SellGig = (props: GigType) => {
               </thead>
               <tbody>
                 {featureData.map((item) => (
-                  <tr key={item.id} className="bg-white/40 font-bold text-black hover">
+                  <tr key={item.id} className="bg-white/40 font-bold text-white hover">
                     <th className="font-extrabold">{item.id}</th>
                     <td colSpan={2}>{item.label}</td>
                     <td>
@@ -284,7 +288,7 @@ const SellGig = (props: GigType) => {
                         <input
                           type="text"
                           placeholder="Basic plan price"
-                          className="input input-bordered w-full"
+                          className="input input-bordered w-full font-extralight text-white/50"
                           name={`basic-${item.id}`}
                           defaultValue={
                             props.id ? props.plans[item.id]?.basic : item.basic
@@ -300,7 +304,7 @@ const SellGig = (props: GigType) => {
                         <input
                           type="text"
                           placeholder="Premium plan price"
-                          className="input input-bordered w-full"
+                          className="input input-bordered w-full  font-extralight text-white/50"
                           name={`premium-${item.id}`}
                           defaultValue={
                             props.id
@@ -318,7 +322,7 @@ const SellGig = (props: GigType) => {
                         <input
                           type="text"
                           placeholder="Deluxe Plan Price"
-                          className="input input-bordered w-full"
+                          className="input input-bordered w-full  font-extralight text-white/50"
                           name={`deluxe-${item.id}`}
                           defaultValue={
                             props.id
@@ -339,7 +343,7 @@ const SellGig = (props: GigType) => {
         </div>
         <div className="flex flex-col justify-center items-center">
     <div className="bg-white/70 px-10 py-4 rounded-xl">
-    <div className="mb-2 font-extrabold">Choose your order</div>
+    <div className="mb-2 font-extrabold text-stone-950">Choose your order</div>
     <div className="flex gap-x-5">
       <button className="btn btn-outline btn-primary">Basic</button>
       <button className="btn btn-outline btn-secondary">Premium</button>
