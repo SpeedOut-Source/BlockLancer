@@ -16,14 +16,14 @@ const Navbar: React.FC = () => {
       </div>
       <div className="hidden w-full justify-between xl:flex mx-4">
         <Logo />
-        <div className="flex gap-10">
-          <Link className="btn btn-ghost font-extrabold" href="/">
+        <div className="flex gap-10 text-white/70  hover:text-white/80">
+          <Link className="btn btn-ghost font-extrabold hover:text-white" href="/">
             Home
           </Link>
-          <Link className="btn btn-ghost font-extrabold" href="/">
+          <Link className="btn btn-ghost font-extrabold hover:text-white" href="#latest-gigs">
             Latest GIGs
           </Link>
-          <Link className="btn btn-ghost font-extrabold" href="about">
+          <Link className="btn btn-ghost font-extrabold hover:text-white" href="about">
             About
           </Link>
         </div>
