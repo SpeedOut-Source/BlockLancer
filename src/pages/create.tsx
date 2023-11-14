@@ -51,11 +51,9 @@ export interface GigType {
 }
 
 const SellGig = (props: GigType) => {
-  console.log(props);
   const router = useRouter();
   const isEditPage = ["/edit/[id]", "/create"].includes(router.pathname);
 
-  console.log(isEditPage, router.pathname);
   const walletState = useConnectWalletStateStore();
   const [isWalletAva, setIsWalletAva] = useState(false);
   const inputThumImgRef = useRef<HTMLInputElement | null>(null);
