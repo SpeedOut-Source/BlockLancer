@@ -1,68 +1,75 @@
 import { type GetServerSidePropsContext } from "next";
-import {
-  getServerSession,
-  type DefaultSession,
-  type NextAuthOptions,
-} from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+import { getServerSession, type NextAuthOptions } from "next-auth";
 
-import { env } from "~/env.mjs";
+import CredentialsProvider from "next-auth/providers/credentials";
 
-/**
- * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
- * object and keep type safety.
- *
- * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
- */
-declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user: DefaultSession["user"] & {
-      id: string;
-      // ...other properties
-      // role: UserRole;
-    };
-  }
+import { db } from "~/lib/firebase/firebaseInit";
+import { doc, getDoc } from "firebase/firestore";
 
-  // interface User {
-  //   // ...other properties
-  //   // role: UserRole;
-  // }
+interface User {
+  user: string;
+  pass: string;
 }
 
-/**
- * Options for NextAuth.js used to configure adapters, providers, callbacks, etc.
- *
- * @see https://next-auth.js.org/configuration/options
- */
+export interface Admins {
+  admins: User[];
+}
+
+export function checkAuthNot(
+  user: string,
+  pass: string,
+  adminsDB: Admins,
+): boolean {
+  for (const iterator of adminsDB.admins) {
+    if (iterator.user === user && iterator.pass === pass) {
+      return false;
+    }
+  }
+  return true;
+}
+
 export const authOptions: NextAuthOptions = {
-  callbacks: {
-    session: ({ session, token }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: token.sub,
-      },
-    }),
+  session: {
+    strategy: "jwt",
   },
   providers: [
-    GoogleProvider({
-      ...env,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
+    CredentialsProvider({
+      type: "credentials",
+      credentials: {},
+      async authorize(credentials) {
+        const { pubKey, password } = credentials as {
+          pubKey: string;
+          password: string;
+        };
+
+        const docRef = doc(db, "admin_panel", "admin");
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+          return null;
+        }
+
+        const fireData = docSnap.data() as Admins;
+
+        if (checkAuthNot(pubKey, password, fireData)) {
+          throw new Error("invalid credentials");
+        }
+
+        return {
+          email: pubKey,
+          name: pubKey,
+          image: pubKey,
+          role: "admin",
+          id: pubKey,
+        };
       },
     }),
   ],
+  pages: {
+    signIn: "/login",
+  },
 };
 
-/**
- * Wrapper for `getServerSession` so that you don't need to import the `authOptions` in every file.
- *
- * @see https://next-auth.js.org/configuration/nextjs
- */
 export const getServerAuthSession = (ctx: {
   req: GetServerSidePropsContext["req"];
   res: GetServerSidePropsContext["res"];

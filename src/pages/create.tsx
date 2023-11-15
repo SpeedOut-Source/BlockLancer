@@ -7,6 +7,7 @@ import { AlertTriangle } from "lucide-react";
 import { addrShort, bytesToMB } from "~/lib/utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const featureData = [
   {
@@ -51,6 +52,7 @@ export interface GigType {
 }
 
 const SellGig = (props: GigType) => {
+  const session = useSession();
   const router = useRouter();
   const isEditPage = ["/edit/[id]", "/create"].includes(router.pathname);
 
@@ -172,16 +174,17 @@ const SellGig = (props: GigType) => {
 
   return (
     <div className="flex flex-col items-center gap-5 p-5">
-      {props.user && walletState.pubkey === props.user && (
-        <div className="btn-group">
-          <button onClick={() => void deleteHandler()} className="btn">
-            Delete
-          </button>
-          <Link href={`/edit/${props.id}`} className="btn">
-            Edit
-          </Link>
-        </div>
-      )}
+      {(props.user && walletState.pubkey === props.user) ||
+        (session.status === "authenticated" && (
+          <div className="btn-group">
+            <button onClick={() => void deleteHandler()} className="btn">
+              Delete
+            </button>
+            <Link href={`/edit/${props.id}`} className="btn">
+              Edit
+            </Link>
+          </div>
+        ))}
       <form
         className="flex flex-col gap-5 p-5"
         onSubmit={(e) => void submitHandler(e)}
