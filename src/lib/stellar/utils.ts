@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import {
+  Keypair,
   xdr,
   Transaction,
   Networks,
@@ -8,9 +9,41 @@ import {
   type Horizon,
   type Memo,
   type MemoType,
-  type Operation,
+  Operation,
+  TransactionBuilder,
 } from "stellar-sdk";
 import log from "../logger/logger";
+import { albedoSignTrx } from "./wallet_clients/albedo_login";
+
+export async function transactionCreate(buyerAddr: string) {
+  const server = new Server("https://horizon-testnet.stellar.org");
+
+  // Issuer Account
+  const issuerAcc = Keypair.random();
+
+  // TODO: have store this in firebase.
+  log.info("issuer acc: ", issuerAcc.publicKey(), issuerAcc.secret());
+  const fee = "100000";
+
+  const transactionInitializer = await server.loadAccount(buyerAddr);
+  const transaction = new TransactionBuilder(transactionInitializer, {
+    fee: fee,
+    networkPassphrase: Networks.TESTNET,
+  })
+    .addOperation(
+      Operation.createAccount({
+        destination: issuerAcc.publicKey(),
+        startingBalance: "40",
+        source: buyerAddr,
+      }),
+    )
+    .setTimeout(0)
+    .build();
+
+  const trxId = transaction.toEnvelope().toXDR("base64");
+  await albedoSignTrx(trxId, buyerAddr, "testnet");
+  return { trxId, issuerAcc };
+}
 
 export const recursiveTransactionSubmitter = async (
   transaction: Transaction<Memo<MemoType>, Operation[]>,

@@ -49,12 +49,16 @@ export async function getSingedXdrAlbedo(xdr: string, customer: string) {
     });
 }
 
-export async function albedoSignTrx(xdr: string, customer: string) {
+export async function albedoSignTrx(
+  xdr: string,
+  customer: string,
+  network = "public",
+) {
   return albedo
     .tx({
       xdr: xdr,
       pubkey: customer,
-      network: "public",
+      network,
       submit: true,
     })
     .then((res) => {

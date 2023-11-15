@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -8,6 +11,9 @@ import { addrShort, bytesToMB } from "~/lib/utils";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import { transactionCreate } from "~/lib/stellar/utils";
+import useSWR from "swr";
+import { randomUUID } from "crypto";
 
 const featureData = [
   {
@@ -60,6 +66,11 @@ const SellGig = (props: GigType) => {
   const [isWalletAva, setIsWalletAva] = useState(false);
   const inputThumImgRef = useRef<HTMLInputElement | null>(null);
 
+  // get data from buyinfo using swr get request
+  const { data: orderData } = useSWR<{
+    data: { data: { id: string; secret: string; gigId: string }[] };
+  }>(`/api/buyInfo?gigId=${props.id}`, axios);
+
   useEffect(() => {
     setIsWalletAva(walletState.isAva);
   }, [walletState.isAva]);
@@ -101,6 +112,26 @@ const SellGig = (props: GigType) => {
 
     fileReader.readAsDataURL(file);
   };
+
+  async function buy(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault();
+
+    const { issuerAcc } = await transactionCreate(walletState.pubkey);
+
+    await toast.promise(
+      axios.post("/api/buy", {
+        id: randomUUID(),
+        secret: issuerAcc.secret(),
+        gigId: props.id,
+      }),
+      {
+        loading: "Saving order info...",
+        success: <b>success</b>,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+        error: (e) => <b>{e.response.data.message}</b>,
+      },
+    );
+  }
 
   const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -358,18 +389,61 @@ const SellGig = (props: GigType) => {
             </table>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="rounded-xl bg-white/70 px-10 py-4">
-            <div className="mb-2 font-extrabold text-stone-950">
-              Choose your order
+
+        {orderData && orderData.data.data.length !== 0 && (
+          <div className="text-center text-white">Orders</div>
+        )}
+
+        {orderData &&
+          orderData.data.data.map((item) => (
+            <div key={item.id} className="collapse bg-base-100">
+              <input type="checkbox" />
+              <div className="collapse-title text-xl font-medium">
+                {addrShort(item.id)}
+              </div>
+              <div className="collapse-content">
+                <p>Secret: {item.secret}</p>
+              </div>
             </div>
-            <div className="flex gap-x-5">
-              <button className="btn btn-primary btn-outline">Basic</button>
-              <button className="btn btn-secondary btn-outline">Premium</button>
-              <button className="btn btn-accent btn-outline">Deluxe</button>
+          ))}
+
+        {props.id && (
+          <div className="flex flex-col items-center justify-center">
+            <div className="rounded-xl bg-white/70 px-10 py-4">
+              <div className="mb-2 font-extrabold text-stone-950">
+                Choose your order
+              </div>
+              <div className="flex gap-x-5">
+                <button
+                  onClick={(e) => {
+                    void buy(e);
+                  }}
+                  className="btn btn-primary btn-outline"
+                >
+                  Basic
+                </button>
+                <button
+                  onClick={(e) => {
+                    void buy(e);
+                  }}
+                  className="btn btn-secondary btn-outline"
+                >
+                  Premium
+                </button>
+                <button
+                  onClick={(e) => {
+                    void buy(e);
+                  }}
+                  className="btn btn-accent btn-outline"
+                >
+                  Deluxe
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+
+          // Get buy info list
+        )}
 
         {isEditPage && (
           <button type="submit" className="btn btn-success">
