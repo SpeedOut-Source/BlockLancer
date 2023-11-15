@@ -35,7 +35,7 @@ export default function Hero(props: HeroProps) {
             </p>
             <div className="gap-4 flex flex-col md:flex-row">
               <Link className="btn btn-outline btn-accent scale-75 xl:scale-100"  href="create">Share your talent</Link>
-              <Link className="btn btn-outline btn-secondary scale-75 xl:scale-100"  href="#latest-gigs">Hire someone</Link>
+              <Link className="btn btn-outline btn-secondary scale-75 xl:scale-100"  href="/#latest-gigs">Hire someone</Link>
             </div>
           </div>
           <div className="relative h-[450px] w-full">

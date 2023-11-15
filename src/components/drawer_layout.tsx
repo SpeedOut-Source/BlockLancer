@@ -24,7 +24,7 @@ function DrawerLayout(_props: DrawerLayoutProps) {
         <button className="btn w-full">Homepage</button>
         <div className="space-y-4">
           <div className="flex flex-col">
-            <Link href={'#latest-gigs'}><button className="btn w-full">Latest GIGs</button></Link>
+            <Link href={'/#latest-gigs'}><button className="btn w-full">Latest GIGs</button></Link>
           </div>
           <div className="flex justify-between space-x-2">
             <Link

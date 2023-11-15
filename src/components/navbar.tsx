@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           <Link className="btn btn-ghost font-extrabold hover:text-white" href="/">
             Home
           </Link>
-          <Link className="btn btn-ghost font-extrabold hover:text-white" href="#latest-gigs">
+          <Link className="btn btn-ghost font-extrabold hover:text-white" href="/#latest-gigs">
             Latest GIGs
           </Link>
           <Link className="btn btn-ghost font-extrabold hover:text-white" href="about">
