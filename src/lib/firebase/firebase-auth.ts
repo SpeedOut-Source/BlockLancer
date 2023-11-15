@@ -6,14 +6,15 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBL_4Qgg2pqtLgYiHunyKze_BLMHNQV3u4",
-  authDomain: "oauth.action-tokens.com",
-  projectId: "auth-29d94",
-  storageBucket: "auth-29d94.appspot.com",
-  messagingSenderId: "443284916220",
-  appId: "1:443284916220:web:3be7d960eab4c329969479",
+  apiKey: "AIzaSyA51llFTagii-ZYMyLciudRp6kgz0P2zs4",
+  authDomain: "blocklancer-auth.firebaseapp.com",
+  projectId: "blocklancer-auth",
+  storageBucket: "blocklancer-auth.appspot.com",
+  messagingSenderId: "110202717338",
+  appId: "1:110202717338:web:5add93cbc9050482844b23",
 };
 
 // Initialize Firebase
 const authApp = initializeApp(firebaseConfig, "authApp");
 export const auth = getAuth(authApp);
+

@@ -289,7 +289,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="text"
+                          type="number"
                           placeholder="Basic plan price"
                           className="input input-bordered w-full font-extralight text-white/50"
                           name={`basic-${item.id}`}
@@ -307,7 +307,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="text"
+                          type="number"
                           placeholder="Premium plan price"
                           className="input input-bordered w-full  font-extralight text-white/50"
                           name={`premium-${item.id}`}
@@ -325,7 +325,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="text"
+                          type="number"
                           placeholder="Deluxe Plan Price"
                           className="input input-bordered w-full  font-extralight text-white/50"
                           name={`deluxe-${item.id}`}
