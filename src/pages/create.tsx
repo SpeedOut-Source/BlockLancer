@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { transactionCreate } from "~/lib/stellar/utils";
 import useSWR from "swr";
-import { randomUUID } from "crypto";
 
 const featureData = [
   {
@@ -118,9 +117,11 @@ const SellGig = (props: GigType) => {
 
     const { issuerAcc } = await transactionCreate(walletState.pubkey);
 
+    const id = Math.random().toString(36).substring(7);
+
     await toast.promise(
       axios.post("/api/buy", {
-        id: randomUUID(),
+        id,
         secret: issuerAcc.secret(),
         gigId: props.id,
       }),
