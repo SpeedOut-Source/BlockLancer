@@ -174,13 +174,16 @@ const SellGig = (props: GigType) => {
 
   return (
     <div className="flex flex-col items-center gap-5 p-5">
-      {(props.user && walletState.pubkey === props.user) ||
+      {(props.user && isWalletAva && walletState.pubkey === props.user) ||
         (session.status === "authenticated" && (
           <div className="btn-group ">
-            <button className="btn bg-red-700 font-extrabold btn-glass">
+            <button className="btn-glass btn bg-red-700 font-extrabold">
               Admin
             </button>
-            <button onClick={() => void deleteHandler()} className="btn bg-red-500">
+            <button
+              onClick={() => void deleteHandler()}
+              className="btn bg-red-500"
+            >
               Delete
             </button>
             <Link href={`/edit/${props.id}`} className="btn bg-amber-700">
@@ -188,7 +191,7 @@ const SellGig = (props: GigType) => {
             </Link>
           </div>
         ))}
-        
+
       <form
         className="flex flex-col gap-5 p-5"
         onSubmit={(e) => void submitHandler(e)}
@@ -208,12 +211,14 @@ const SellGig = (props: GigType) => {
                 required
               />
             ) : (
-              <p className="ml-5 mt-5 text-2xl font-medium text-white">
-                {props.title}
+              <div>
+                <p className="ml-5 mt-5 text-2xl font-medium text-white">
+                  {props.title}
+                </p>
                 <p className="mt-2 text-sm font-medium text-white/60">
                   GIG ID: {props.id}
                 </p>
-              </p>
+              </div>
             )}
 
             <div className="ml-5 mr-10 flex items-center justify-between">
