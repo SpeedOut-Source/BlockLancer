@@ -18,7 +18,7 @@ export default function ConnectWalletButton() {
   return (
     <div className="flex items-center gap-2">
       {isWalletAva && (
-        <Link href="/create" className="btn">
+        <Link href="/create" className="btn glass text-black font-extrabold hover:text-white">
           <PlusIcon className="h-5 w-5" />
           <span>Create</span>
         </Link>

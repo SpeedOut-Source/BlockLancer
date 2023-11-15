@@ -94,7 +94,7 @@ export default function ConnectDialog({ className }: ConnectDialogProps) {
     <Dialog open={state.isOpen} onOpenChange={closeModal}>
       <DialogContent
         className={twMerge(
-          "scrollbar-style !m-0 max-h-screen overflow-y-auto !rounded-xl !p-3 ",
+          "scrollbar-style  bg-gray-600/80 text-white/90 font-bold !m-0 max-h-screen overflow-y-auto !rounded-xl !p-3 ",
           className,
         )}
       >
@@ -193,7 +193,7 @@ export default function ConnectDialog({ className }: ConnectDialogProps) {
               !isAccountActivate && walletState.isAva ? "invisible" : ""
             }
           >
-            <h3 className="mb-3 mt-4 flex justify-between text-lg font-medium leading-6 tracking-wider">
+            <h3 className="mb-3 flex justify-between text-lg font-medium leading-6 tracking-wider">
               <span>Select Wallet</span>
             </h3>
             <div className="mt-2 grid gap-4 sm:grid-cols-2">

@@ -176,15 +176,19 @@ const SellGig = (props: GigType) => {
     <div className="flex flex-col items-center gap-5 p-5">
       {(props.user && walletState.pubkey === props.user) ||
         (session.status === "authenticated" && (
-          <div className="btn-group">
-            <button onClick={() => void deleteHandler()} className="btn">
+          <div className="btn-group ">
+            <button className="btn bg-red-700 font-extrabold btn-glass">
+              Admin
+            </button>
+            <button onClick={() => void deleteHandler()} className="btn bg-red-500">
               Delete
             </button>
-            <Link href={`/edit/${props.id}`} className="btn">
+            <Link href={`/edit/${props.id}`} className="btn bg-amber-700">
               Edit
             </Link>
           </div>
         ))}
+        
       <form
         className="flex flex-col gap-5 p-5"
         onSubmit={(e) => void submitHandler(e)}
@@ -292,7 +296,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="number"
+                          type="text"
                           placeholder="Basic plan price"
                           className="input input-bordered w-full font-extralight text-white/50"
                           name={`basic-${item.id}`}
@@ -310,7 +314,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="number"
+                          type="text"
                           placeholder="Premium plan price"
                           className="input input-bordered w-full  font-extralight text-white/50"
                           name={`premium-${item.id}`}
@@ -328,7 +332,7 @@ const SellGig = (props: GigType) => {
                     <td>
                       {isEditPage ? (
                         <input
-                          type="number"
+                          type="text"
                           placeholder="Deluxe Plan Price"
                           className="input input-bordered w-full  font-extralight text-white/50"
                           name={`deluxe-${item.id}`}
