@@ -313,7 +313,7 @@ const SellGig = (props: GigType) => {
                           required
                         />
                       ) : (
-                        <span>{item.basic}</span>
+                        <span>{props.plans[item.id - 1]?.basic}</span>
                       )}
                     </td>
                     <td>
@@ -331,7 +331,7 @@ const SellGig = (props: GigType) => {
                           required
                         />
                       ) : (
-                        <span>{item.premium}</span>
+                        <span>{props.plans[item.id - 1]?.premium}</span>
                       )}
                     </td>
                     <td>
@@ -349,7 +349,7 @@ const SellGig = (props: GigType) => {
                           required
                         />
                       ) : (
-                        <span>{item.deluxe}</span>
+                        <span>{props.plans[item.id - 1]?.deluxe}</span>
                       )}
                     </td>
                   </tr>
