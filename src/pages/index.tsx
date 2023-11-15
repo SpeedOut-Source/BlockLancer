@@ -48,7 +48,7 @@ export default function Home({ data }: { data: GigType[] }) {
             {data.map((gig) => (
               <Link
                 href={`/view/${gig.id}`}
-                key={gig.user}
+                key={gig.id}
                 className="btn h-96 w-96"
               >
                 <div className="card h-96 w-96 shadow-xl">
