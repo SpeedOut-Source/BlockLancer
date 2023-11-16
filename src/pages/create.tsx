@@ -112,10 +112,13 @@ const SellGig = (props: GigType) => {
     fileReader.readAsDataURL(file);
   };
 
-  async function buy(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  async function buy(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    amount: string,
+  ) {
     e.preventDefault();
 
-    const { issuerAcc } = await transactionCreate(walletState.pubkey);
+    const { issuerAcc } = await transactionCreate(walletState.pubkey, amount);
 
     const id = Math.random().toString(36).substring(7);
 
@@ -206,24 +209,27 @@ const SellGig = (props: GigType) => {
 
   return (
     <div className="flex flex-col items-center gap-5 p-5">
-      {(props.user && isWalletAva && walletState.pubkey === props.user) ||
-        (session.status === "authenticated" && (
-          <div className="btn-group ">
-            <button className="btn-glass btn bg-red-700 font-extrabold">
-              Admin
-            </button>
+      <div className="btn-group ">
+        {session.status === "authenticated" && (
+          <button className="btn-glass btn bg-red-700 font-extrabold">
+            Admin
+          </button>
+        )}
+
+        {((props.user && isWalletAva && walletState.pubkey === props.user) ||
+          session.status === "authenticated") && (
+          <>
             <button
               onClick={() => void deleteHandler()}
               className="btn bg-red-500"
-            >
-              Delete
+            >Delete
             </button>
             <Link href={`/edit/${props.id}`} className="btn bg-amber-700">
               Edit
             </Link>
-          </div>
-        ))}
-
+          </>
+        )}
+      </div>
       <form
         className="flex flex-col gap-5 p-5"
         onSubmit={(e) => void submitHandler(e)}
@@ -273,7 +279,6 @@ const SellGig = (props: GigType) => {
                     <input
                       ref={inputThumImgRef}
                       onChange={handlerThumbImage}
-                      required
                       className="file-input w-full text-sm text-gray-500"
                       type="file"
                       accept="image/jpeg, image/png"
@@ -400,7 +405,7 @@ const SellGig = (props: GigType) => {
             <div key={item.id} className="collapse bg-base-100">
               <input type="checkbox" />
               <div className="collapse-title text-xl font-medium">
-                {addrShort(item.id)}
+                {item.id}
               </div>
               <div className="collapse-content">
                 <p>Secret: {item.secret}</p>
@@ -417,7 +422,7 @@ const SellGig = (props: GigType) => {
               <div className="flex gap-x-5">
                 <button
                   onClick={(e) => {
-                    void buy(e);
+                    void buy(e, props.plans[6]!.basic);
                   }}
                   className="btn btn-primary btn-outline"
                 >
@@ -425,7 +430,7 @@ const SellGig = (props: GigType) => {
                 </button>
                 <button
                   onClick={(e) => {
-                    void buy(e);
+                    void buy(e, props.plans[6]!.premium);
                   }}
                   className="btn btn-secondary btn-outline"
                 >
@@ -433,7 +438,7 @@ const SellGig = (props: GigType) => {
                 </button>
                 <button
                   onClick={(e) => {
-                    void buy(e);
+                    void buy(e, props.plans[6]!.deluxe);
                   }}
                   className="btn btn-accent btn-outline"
                 >
