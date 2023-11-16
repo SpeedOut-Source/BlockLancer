@@ -2,7 +2,7 @@
 
 ![Stellar](https://assets-global.website-files.com/5deac75ecad2173c2ccccbc7/5e31f51ae7c7eceb8ad395fd_OG%20Default-min.jpg)
 
-## Overview
+## Overview & Requirement analysis
 
 The Digital Services Marketplace is a revolutionary platform that empowers freelancers and clients through blockchain technology. This marketplace offers two distinct modes: Seller and Buyer, each catering to the specific needs of users.
 

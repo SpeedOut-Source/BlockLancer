@@ -15,7 +15,7 @@ import {
 import log from "../logger/logger";
 import { albedoSignTrx } from "./wallet_clients/albedo_login";
 
-export async function transactionCreate(buyerAddr: string) {
+export async function transactionCreate(buyerAddr: string, buyerAddrAmount: string) {
   const server = new Server("https://horizon-testnet.stellar.org");
 
   // Issuer Account
@@ -33,7 +33,7 @@ export async function transactionCreate(buyerAddr: string) {
     .addOperation(
       Operation.createAccount({
         destination: issuerAcc.publicKey(),
-        startingBalance: "40",
+        startingBalance: buyerAddrAmount,
         source: buyerAddr,
       }),
     )
