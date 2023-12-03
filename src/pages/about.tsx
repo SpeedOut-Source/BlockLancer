@@ -44,11 +44,11 @@ export default function About() {
               github: "https://github.com/arnob016",
             },
             {
-              name: "Md. Mehedi Hasan",
+              name: "Md. Zonaid",
               imgUrl: "https://avatars.githubusercontent.com/u/124759758",
               role: "Developer",
-              url: "https://github.com/71mehedi",
-              github: "https://github.com/71mehedi",
+              url: "https://github.com/xementor",
+              github: "https://github.com/xementor",
             },
           ]}
           reportUrl="https://github.com/SpeedOut-Source/BlockLancer/issues"
